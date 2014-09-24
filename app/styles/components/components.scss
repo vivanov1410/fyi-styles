@@ -4,17 +4,33 @@
 *
 **/
 
-@import '_utils';
-@import '_normalize';
-@import '_global';
+// Base
+@import '_base/_utils',
+        '_base/_normalize',
+        '_base/_global',
+        '_base/_palette';
 
-// Icons - Leave it here to otherfiles can extend if needed
-@import '_components/_icons';
+/**
+ * @todo find out where to include icons, maybe base 
+ */
+@import '_modules/_icons';
 
-// Color Palette
-@import '_palette';
+// Layouts
+@import '_layouts/_grid',
+        '_layouts/_typography',
+        '_layouts/_button',
+        '_layouts/_list',
+        '_layouts/_link',
+        '_layouts/_table',
+        '_layouts/_media',
+        '_layouts/_breadcrumb',
+        '_layouts/_subsection-title',
+        '_layouts/_articles-list',
+        '_layouts/_guides-list',
+        '_layouts/_icon-circle';
 
 // Modules
+@import '_modules/_icons';
 @import '_modules/_highlight';
 @import '_modules/_editorial-header';
 @import '_modules/_summary-header';
@@ -31,26 +47,11 @@
 @import '_modules/_toc';
 @import '_modules/_next-lessons';
 
-// Components
-@import '_components/_grid';
-@import '_components/_typography';
-@import '_components/_button';
-@import '_components/_list';
-@import '_components/_link';
-@import '_components/_table';
-@import '_components/_media';
-@import '_components/_breadcrumb';
-@import '_components/_subsection-title';
-@import '_components/_articles-list';
-@import '_components/_guides-list';
-@import '_components/_icon-circle';
-
-// Themed styles
-@import '_themed';
+// Themes
 
 // Pages
 @import '_pages/_styleguide';
 @import '_pages/_page-resources';
 
-// Make sure this is last to override anything else :)
-@import '_helper';
+// Make sure this is last to override anything else
+@import '_base/_helper';
