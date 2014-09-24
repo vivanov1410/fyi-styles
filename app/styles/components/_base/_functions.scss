@@ -2,8 +2,18 @@
 *
 * Functions
 *
-*/
+**/
 
 @function leading($size, $context: $lineHeight) {
   @return  $context / $size + em;
+}
+
+/**
+ * Returns a color from the color palette based on range
+ * @param  {string} $color - color name
+ * @param  {number} $range (500) - color range from 50 to 1000
+ * @return {hex}
+ */
+@function color($color, $range: 500) {
+  @return map-get($color, $range);
 }
