@@ -1,8 +1,8 @@
 /**
 *
-* Global
+* Globals
 *
-**/
+*/
 
 *,
 *::before,
@@ -33,6 +33,9 @@ pre {
   padding: 13px;
 }
 
+/**
+ * @todo: move following styles to layouts
+ */
 .main-container {
   @include container(true);
 }

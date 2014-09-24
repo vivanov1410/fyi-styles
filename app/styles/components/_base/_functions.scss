@@ -1,0 +1,9 @@
+/**
+*
+* Functions
+*
+*/
+
+@function leading($size, $context: $lineHeight) {
+  @return  $context / $size + em;
+}

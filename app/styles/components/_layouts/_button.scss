@@ -2,7 +2,7 @@
 *
 * Button
 *
-**/
+*/
 
 .button {
   display: inline-block;
@@ -29,7 +29,12 @@
   }
 }
 
-// Mixin to create buttons
+/**
+ * Creates a button
+ * @param {string} $color
+ * @param {string} $textColor
+ * @param {bool} $isInverted (false)
+ */
 @mixin style-button($color, $textColor, $isInverted: false) {
 
   background: $color;
@@ -38,7 +43,6 @@
 
   @if $isInverted { border-color: transparent;}
 }
-
 
 .button--primary {
   @extend .button;

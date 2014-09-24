@@ -1,14 +1,16 @@
 /**
 *
-* Main Stylesheet For Visual Style Guide
+* Main Stylesheet
 *
-**/
+*/
 
 // Base
-@import '_base/_utils',
+@import '_base/_palette',
+        '_base/_settings',
+        '_base/_functions',
+        '_base/_mixins',
         '_base/_normalize',
-        '_base/_global',
-        '_base/_palette';
+        '_base/_general';
 
 /**
  * @todo find out where to include icons, maybe base 
@@ -54,4 +56,4 @@
 @import '_pages/_page-resources';
 
 // Make sure this is last to override anything else
-@import '_base/_helper';
+@import '_base/_helpers';
