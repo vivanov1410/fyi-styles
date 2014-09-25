@@ -62,8 +62,10 @@ $colorPerformanceSecondary: lighten($colorPerformance, 30%) !default;
 /**
  * Font
  */
-$fontDefault: Helvetica, Arial, sans-serif !default;
-$fontHighlight: 'Roboto Condensed', Helvetica, sans-serif !default;
+$fontPath: '../../fonts/';
+
+$fontDefault: 'Helvetica Neue', Arial, sans-serif !default;
+$fontHighlight: 'Helvetica Neue', sans-serif !default;
 $fontIcon: 'icons' !default;
 
 $fontSmall: 13px !default;
