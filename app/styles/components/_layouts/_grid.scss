@@ -4,51 +4,54 @@
 *
 **/
 
+/**
+ * Grid classes for medium view
+ */
 @include medium-only {
-  // Generating grid classes for medium view
   @for $i from 1 through $mediumColCount {
-    .g-medium--#{$i} {
+    .l-g-md--#{$i} {
       @include rule--col(medium);
       width: ($mediumColWidth*$i) + ($mediumGutterWidth*($i + -1));
       @if $i == $mediumColCount { margin-right: 0; }
     }
 
     @if $i < $mediumColCount {
-      .g-medium--push-#{$i} {
+      .l-g-md--push-#{$i} {
         margin-left: ($mediumColWidth*$i) + ($mediumGutterWidth*$i);
       }
-      .g-medium--pull-#{$i} {
+      .l-g-md--pull-#{$i} {
         margin-right: ($mediumColWidth*$i) + ($mediumGutterWidth*$i);
       }
     }
   }
 
-  .g-medium--full {
+  .l-g-md--full {
     @include rule--col(medium);
     margin-right: 0;
     width: 100%;
   }
 
-  .g--third {
+  .l-g--third {
     @include rule--col(medium);
     width: $mediumColWidth;
   }
 
-  .g--half,
-  .g-medium--half {
+  .l-g--half,
+  .l-g-md--half {
     @include rule--col(medium);
     width: 50% - $mediumGutterWidth/2;
   }
 
-  .g-medium--last { margin-right: 0; }
-  .g-medium--last + .g-medium--half { clear: left; }
+  .l-g-md--last { margin-right: 0; }
+  .l-g-md--last + .l-g-md--half { clear: left; }
 
-  .g--pull-half { margin-right: 50% + $mediumGutterWidth/2; }
+  .l-g--pull-half { margin-right: 50% + $mediumGutterWidth/2; }
 }
 
-
+/**
+ * Grid classes for wide view
+ */
 @include wide {
-  // Generating grid classes for wide view
   @for $i from 1 through $wideColCount {
     .g-wide--#{$i} {
       @include rule--col(wide);
@@ -85,21 +88,23 @@
     width: 50% - $wideGutterWidth/2;
   }
 
-  .g--pull-half { margin-right: 50% + $wideGutterWidth/2; }
+  .l-g--pull-half { margin-right: 50% + $wideGutterWidth/2; }
 }
 
+/**
+ * Global 'last' class
+ * Should be used with global grid classes, such as 'half' or 'third'
+ * @example:
+ * <div class="third"></div>
+ * <div class="third"></div>
+ * <div class="third last"></div>
+*/
+.l-g--last { margin-right: 0; }
 
-// This is a global 'last' class
-// to be used with global grid classes, such as 'half' or 'third'
-// Example usage:
-//  <div class="third"></div>
-//  <div class="third"></div>
-//  <div class="third last"></div>
-.g--last { margin-right: 0; }
-
-
-// This is a global 'centered' class
-.g--centered {
+/**
+ * Global 'centered' class
+ */
+.l-g--centered {
   float: none; // reset float to none so we can center it
   margin-left: auto;
   margin-right: auto;
