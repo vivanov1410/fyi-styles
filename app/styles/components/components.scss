@@ -2,7 +2,7 @@
 *
 * Main Stylesheet
 *
-*/
+**/
 
 // Base
 @import '_base/_palette',
@@ -20,6 +20,7 @@
 // Layouts
 @import '_layouts/_grid',
         '_layouts/_typography',
+        '_layouts/_container',
         '_layouts/_button',
         '_layouts/_list',
         '_layouts/_link',
@@ -32,29 +33,29 @@
         '_layouts/_icon-circle';
 
 // Modules
-@import '_modules/_icons';
-@import '_modules/_highlight';
-@import '_modules/_editorial-header';
-@import '_modules/_summary-header';
-@import '_modules/_related-guides';
-@import '_modules/_in-this-guide';
-@import '_modules/_articles-section';
-@import '_modules/_guides-section';
-@import '_modules/_page-header';
-@import '_modules/_featured-section';
-@import '_modules/_featured-spotlight';
-@import '_modules/_quote';
-@import '_modules/_article-nav';
-@import '_modules/_did-you-know';
-@import '_modules/_toc';
-@import '_modules/_next-lessons';
-@import '_modules/_color-palette';
+@import '_modules/_icons',
+        '_modules/_highlight',
+        '_modules/_editorial-header',
+        '_modules/_summary-header',
+        '_modules/_related-guides',
+        '_modules/_in-this-guide',
+        '_modules/_articles-section',
+        '_modules/_guides-section',
+        '_modules/_page-header',
+        '_modules/_featured-section',
+        '_modules/_featured-spotlight',
+        '_modules/_quote',
+        '_modules/_article-nav',
+        '_modules/_did-you-know',
+        '_modules/_toc',
+        '_modules/_next-lessons',
+        '_modules/_color-palette';
 
 // Themes
 
 // Pages
-@import '_pages/_styleguide';
-@import '_pages/_page-resources';
+@import '_pages/_styleguide',
+        '_pages/_page-resources';
 
 // Make sure this is last to override anything else
 @import '_base/_helpers';
