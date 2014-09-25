@@ -1,37 +1,22 @@
 /**
  * 
- * Colors Pelette
+ * Defining colors
  * 
  **/
 
-.color--blue { color: $colorBlue; }
-.color--red { color: $colorRed; }
-.color--green { color: $colorGreen; }
-.color--yellow { color: $colorYellow; }
-.color--blue-secondary { color: $colorBlueSecondary; }
-.color--red-secondary { color: $colorRedSecondary; }
-.color--green-secondary { color: $colorGreenSecondary; }
-.color--yellow-secondary { color: $colorYellowSecondary; }
+$grey-dark:			darken(#000, 87%) !default;
+$grey:					darken(#000, 54%) !default;
+$grey-light:		darken(#000, 26%) !default;
 
-.color--gray-background { color: $colorGrayBackground; }
-.color--gray-keyline { color: $colorGrayKeyline; }
-.color--gray { color: $colorGray; }
-.color--gray-dark { color: $colorGrayDark; }
+$blue-dark:			map-get($blue, 700) !default; // #00374f
+$blue:					map-get($blue, 500) !default; // #004f71
+$blue-light:		map-get($blue, 100) !default; // #ccdbe2
 
-.color--text { color: $colorText; }
-.color--highlight { color: $colorHighlight; }
-.color--warning { color: $colorWarning; }
-.color--danger { color: $colorDanger; }
-.color--muted { color: $colorMuted; }
+$orange-dark:		map-get($deep-orange, 700) !default; // #e64a19
+$orange:				map-get($deep-orange, 500) !default; // #ff5722
+$orange-light:	map-get($deep-orange, 100) !default; // #ffccbc
 
-.color--remember { color: $colorRemember; }
-.color--learning { color: $colorLearning; }
-
-.color--layouts { color: $colorLayouts; }
-.color--user { color: $colorUser; }
-.color--media { color: $colorMedia; }
-.color--performance { color: $colorPerformance; }
-.color--layouts-secondary { color: $colorLayoutsSecondary; }
-.color--user-secondary { color: $colorUserSecondary; }
-.color--media-secondary { color: $colorMediaSecondary; }
-.color--performance-secondary { color: $colorPerformanceSecondary; }
+$color-success:	map-get($light-green, 500)	!default; // #8bc34a
+$color-info:		map-get($light-blue, 500)		!default; // #03a9f4
+$color-warning:	map-get($light-orange, 500)	!default; // #ff9800
+$color-danger:	map-get($red, 500)					!default; // #e51c23
