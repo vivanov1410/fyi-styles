@@ -53,37 +53,37 @@
  */
 @include wide {
   @for $i from 1 through $wideColCount {
-    .g-wide--#{$i} {
+    .l-g-wide--#{$i} {
       @include rule--col(wide);
       width: ($wideColWidth*$i) + ($wideGutterWidth*($i + -1));
       @if $i == $wideColCount { margin-right: 0; }
     }
 
     @if $i < $wideColCount {
-      .g-wide--push-#{$i} {
+      .l-g-wide--push-#{$i} {
         margin-left: ($wideColWidth*$i) + ($wideGutterWidth*$i);
       }
-      .g-wide--pull-#{$i} {
+      .l-g-wide--pull-#{$i} {
         margin-right: ($wideColWidth*$i) + ($wideGutterWidth*$i);
       }
     }
   }
 
-  .g-wide--last { margin-right: 0; }
+  .l-g-wide--last { margin-right: 0; }
 
-  .g-wide--full {
+  .l-g-wide--full {
     @include rule--col(wide);
     margin-right: 0;
     width: 100%;
   }
 
-  .g--third {
+  .l-g--third {
     @include rule--col(wide);
     width: 30.8%;
   }
 
-  .g--half,
-  .g-wide--half {
+  .l-g--half,
+  .l-g-wide--half {
     @include rule--col(wide);
     width: 50% - $wideGutterWidth/2;
   }
