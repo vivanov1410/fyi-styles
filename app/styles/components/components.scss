@@ -4,7 +4,9 @@
 *
 **/
 
-// Base
+/**
+ * Base
+ */
 @import '_base/_palette',
         '_base/_settings',
         '_base/_functions',
@@ -17,7 +19,9 @@
  */
 @import '_modules/_icons';
 
-// Layouts
+/**
+ * Layouts
+ */
 @import '_layouts/_grid',
         '_layouts/_typography',
         '_layouts/_container',
@@ -32,7 +36,9 @@
         '_layouts/_guides-list',
         '_layouts/_icon-circle';
 
-// Modules
+/**
+ * Modules
+ */
 @import '_modules/_icons',
         '_modules/_highlight',
         '_modules/_editorial-header',
@@ -48,14 +54,15 @@
         '_modules/_article-nav',
         '_modules/_did-you-know',
         '_modules/_toc',
-        '_modules/_next-lessons',
-        '_modules/_color-palette';
+        '_modules/_next-lessons';
 
-// Themes
+/**
+ * States
+ */
 
-// Pages
-@import '_pages/_styleguide',
-        '_pages/_page-resources';
+/**
+ * Themes
+ */
 
 // Make sure this is last to override anything else
 @import '_base/_helpers';

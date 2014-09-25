@@ -4,10 +4,6 @@
 *
 **/
 
-@function leading($size, $context: $lineHeight) {
-  @return  $context / $size + em;
-}
-
 /**
  * Returns a color from the color palette based on range
  * @param  {string} $color - color name

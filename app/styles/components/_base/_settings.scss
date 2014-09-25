@@ -4,14 +4,18 @@
 *
 **/
 
-// Defining breakpoints
+/**
+ * Breakpoints
+ */
 $medium: 620px !default;
 $wide: 800px !default;
 $huge: 1600px !default;
 $mediumContainer: 688px !default;
 $wideContainer: 864px !default;
 
-// Defining grid sizes
+/**
+ * Grid
+ */
 $mediumColCount: 3 !default;
 $mediumColWidth: 30.3% !default;
 $mediumGutterWidth: 4.5% !default;
@@ -19,7 +23,9 @@ $wideColCount: 4 !default;
 $wideColWidth: 22.2% !default;
 $wideGutterWidth: 3.7% !default;
 
-// Defining colors
+/**
+ * Colors
+ */
 $colorBlue: #3372df !default;
 $colorBlueSecondary: lighten($colorBlue, 30%) !default;
 $colorGreen: #0f9d58 !default;
@@ -53,12 +59,13 @@ $colorMediaSecondary: lighten($colorMedia, 30%) !default;
 $colorPerformance: #7b5294 !default;
 $colorPerformanceSecondary: lighten($colorPerformance, 30%) !default;
 
-// Defining font family
+/**
+ * Font
+ */
 $fontDefault: Helvetica, Arial, sans-serif !default;
 $fontHighlight: 'Roboto Condensed', Helvetica, sans-serif !default;
 $fontIcon: 'icons' !default;
 
-// Defining font sizes
 $fontSmall: 13px !default;
 $fontBase: 16px  !default;
 $fontMedium: 20px !default;
@@ -70,8 +77,12 @@ $fontHuge: 110px !default;
 // Defining baseline line height
 $lineHeight: 26px !default;
 
-// Defining animation easings
+/**
+ * Animation Easing
+ */
 $animationEasing: cubic-bezier(0.455, 0.030, 0.515, 0.955) !default;
 
-// Defining sidebar stuff
+/**
+ * Sidebar
+ */
 $sidebarWidth: 280px !default;
