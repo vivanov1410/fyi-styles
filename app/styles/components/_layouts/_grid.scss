@@ -2,7 +2,7 @@
 *
 * Grid
 *
-*/
+**/
 
 @include medium-only {
   // Generating grid classes for medium view
@@ -105,15 +105,15 @@
   margin-right: auto;
 }
 
-// This is a grid overlay
-// Its purpose is to show users our grid system
-// It becomes visible when a class 'debug' is added to the body
+/**
+ * Grid overlay
+ * Shows users our grid system
+ * Only visible when a class 'debug' is added to the body
+ */
 .grid-overlay {
-
   display: none;
   pointer-events: none;
 
-  // Only show when parents (body) has debug class
   .debug & {
     @include container(true);
 

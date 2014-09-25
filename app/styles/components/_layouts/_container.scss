@@ -1,0 +1,35 @@
+/**
+*
+* Container
+*
+**/
+
+.l-main-container {
+  @include container(true);
+}
+
+.l-container {
+  @include container(true);
+}
+
+.l-container-medium {
+  @include medium {
+    @include container(true);
+  }
+}
+
+.l-container-small {
+  @include small-only {
+    @include container(true);
+  }
+}
+
+.l-content {
+  @include wide {
+    margin-right: 25.9%; // took this from the grid output - using @extend inside media-query is deprecated, need to figure out a better way to do this.
+
+    & pre {
+      margin-right: -25.9%;
+    }
+  }
+}
