@@ -1,0 +1,16 @@
+/**
+ *
+ * Fonts
+ * 
+ */
+
+@font-face {
+    font-family: 'Helvetica Neue';
+    src: url('#{$fontPath}/helvetica-neue-webfont.eot');
+    src: url('#{$fontPath}/helvetica-neue-webfont.eot?#iefix') format('embedded-opentype'),
+         url('#{$fontPath}/helvetica-neue-webfont.woff') format('woff'),
+         url('#{$fontPath}/helvetica-neue-webfont.ttf') format('truetype'),
+         url('#{$fontPath}/helvetica-neue-webfont.svg#helveticaneuemedium') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
