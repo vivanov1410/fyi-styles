@@ -8,9 +8,11 @@
  * Colors
  * Gray and brand colors for use across FYi Styles
  */
-$greyDarkColor:      darken(#000, 87%) !default;
-$greyColor:          darken(#000, 54%) !default;
-$greyLightColor:     darken(#000, 26%) !default;
+$greyDarkerColor:			darken(#fff, 87%) !default;
+$greyDarkColor:				darken(#fff, 80%) !default;
+$greyColor:						darken(#fff, 54%) !default;
+$greyLightColor:			darken(#fff, 26%) !default;
+$greyLighterColor:		darken(#fff, 12%) !default;
 
 $brandBlueDarkColor:       map-get($blue, 700) !default; // #00374f
 $brandBlueColor:           map-get($blue, 500) !default; // #004f71
@@ -27,7 +29,7 @@ $brandDangerColor:         map-get($red, 500)          !default; // #e51c23
 
 $bodyBgColor:         #fff !default;
 $textColor:           $greyDarkColor !default;
-$linkColor:           $brandBlueLightColor !default;
+$linkColor:           $brandInfoColor !default;
 
 /**
  * Breakpoints
@@ -87,17 +89,18 @@ $wideGutterWidth: 3.7% !default;
 /**
  * Font
  */
-$fontDefault: Helvetica, Arial, sans-serif !default;
-$fontHighlight: 'Roboto Condensed', Helvetica, sans-serif !default;
+$fontPath: '../../fonts/';
+
+$fontDefault: 'Helvetica Neue', Arial, sans-serif !default;
+$fontHighlight: 'Helvetica Neue', sans-serif !default;
 $fontIcon: 'icons' !default;
 
-$fontSmall: 13px !default;
-$fontBase: 16px  !default;
-$fontMedium: 20px !default;
-$fontLarge: 26px !default;
-$fontXLarge: 42px !default;
-$fontXXLarge: 68px !default;
-$fontHuge: 110px !default;
+$fontSmall: 0.618em !default;
+$fontBase: 1em  !default;
+$fontMedium: 1.618em !default;
+$fontLarge: 2.618em !default;
+$fontXLarge: 4.236em !default;
+$fontHuge: 6.854em !default;
 
 // Defining baseline line height
 $lineHeight: 26px !default;

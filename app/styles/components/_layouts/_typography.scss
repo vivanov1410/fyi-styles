@@ -6,17 +6,19 @@
 
 // Just normalizing text
 // Recommend using padding instead of margin
-h1, h2, h3, h4, h5, p {
+h1, h2, h3, h4, h5, h6, p {
   margin: 0;
 }
 
 // Definitions
 .small,
+h6,
 small {
   @include type--small;
 }
 
 .base,
+h5,
 p,
 ul,
 ol {
