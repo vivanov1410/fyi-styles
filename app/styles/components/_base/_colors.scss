@@ -4,19 +4,3 @@
  * 
  **/
 
-$grey-dark:			darken(#000, 87%) !default;
-$grey:					darken(#000, 54%) !default;
-$grey-light:		darken(#000, 26%) !default;
-
-$blue-dark:			map-get($blue, 700) !default; // #00374f
-$blue:					map-get($blue, 500) !default; // #004f71
-$blue-light:		map-get($blue, 100) !default; // #ccdbe2
-
-$orange-dark:		map-get($deep-orange, 700) !default; // #e64a19
-$orange:				map-get($deep-orange, 500) !default; // #ff5722
-$orange-light:	map-get($deep-orange, 100) !default; // #ffccbc
-
-$color-success:	map-get($light-green, 500)	!default; // #8bc34a
-$color-info:		map-get($light-blue, 500)		!default; // #03a9f4
-$color-warning:	map-get($light-orange, 500)	!default; // #ff9800
-$color-danger:	map-get($red, 500)					!default; // #e51c23

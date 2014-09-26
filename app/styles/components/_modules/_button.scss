@@ -36,7 +36,6 @@
  * @param {bool} $isInverted (false)
  */
 @mixin style-button($color, $textColor, $isInverted: false) {
-
   background: $color;
   color: $textColor;
   border: 1px solid darken($color, 10%);
@@ -51,10 +50,10 @@
 
 .button--secondary {
   @extend .button;
-  @include style-button(#ffffff, $colorBlue);
+  @include style-button(#ffffff, $brandBlueColor);
 }
 
 .button--secondary-variation {
   @extend .button;
-  @include style-button(#ffffff, $colorBlue, true);
+  @include style-button(#ffffff, $brandBlueColor, true);
 }

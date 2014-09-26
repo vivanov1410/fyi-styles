@@ -15,8 +15,6 @@
   }
 }
 
-/*==========  TEXT DIVIDER  ==========*/
-
 .text-divider {
   position: relative;
   margin-bottom: $lineHeight;
@@ -27,7 +25,7 @@
     position: absolute;
     width: 40%;
     height: 1px;
-    box-shadow: 0 1px 0 0 $colorGrayKeyline;
+    box-shadow: 0 1px 0 0 $greyColor;
     left: 30%;
     bottom: -$lineHeight/2;
   }
@@ -57,14 +55,10 @@
   }
 }
 
-
-/*==========  GENERIC  ==========*/
 .centered {
   text-align: center;
 }
 
-
-/*==========  TAG  ==========*/
 .tag {
   @include type--small;
   font-family: $fontHighlight;
@@ -74,7 +68,7 @@
   text-decoration: none;
 
   &:hover {
-    color: $colorGrayDark;
+    color: $greyDarkColor;
   }
 
   &::before {

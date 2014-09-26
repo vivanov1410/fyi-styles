@@ -8,11 +8,14 @@
  * Base
  */
 @import '_base/_palette',
-        '_base/_settings',
+        '_base/_variables',
         '_base/_functions',
         '_base/_mixins',
         '_base/_normalize',
         '_base/_general',
+        '_base/_list',
+        '_base/_link',
+        '_base/_table',
         '_base/_fonts';
 
 /**
@@ -26,36 +29,18 @@
 @import '_layouts/_grid',
         '_layouts/_typography',
         '_layouts/_container',
-        '_layouts/_button',
         '_layouts/_list',
-        '_layouts/_link',
         '_layouts/_table',
         '_layouts/_media',
         '_layouts/_breadcrumb',
-        '_layouts/_subsection-title',
-        '_layouts/_articles-list',
-        '_layouts/_guides-list',
         '_layouts/_icon-circle';
 
 /**
  * Modules
  */
 @import '_modules/_icons',
-        '_modules/_highlight',
-        '_modules/_editorial-header',
-        '_modules/_summary-header',
-        '_modules/_related-guides',
-        '_modules/_in-this-guide',
-        '_modules/_articles-section',
-        '_modules/_guides-section',
-        '_modules/_page-header',
-        '_modules/_featured-section',
-        '_modules/_featured-spotlight',
-        '_modules/_quote',
-        '_modules/_article-nav',
-        '_modules/_did-you-know',
-        '_modules/_toc',
-        '_modules/_next-lessons';
+        '_modules/_button',
+        '_modules/_page-header';
 
 /**
  * States
