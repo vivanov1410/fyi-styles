@@ -37,15 +37,7 @@ h2 {
   @include type--xlarge;
 }
 
-.xxlarge,
+.huge,
 h1 {
-  @include type--xxlarge;
-}
-
-.huge {
   @include type--huge;
-}
-
-li > p {
-  padding-top: 0;
 }

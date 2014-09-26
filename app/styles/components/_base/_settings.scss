@@ -68,13 +68,12 @@ $fontDefault: 'Helvetica Neue', Arial, sans-serif !default;
 $fontHighlight: 'Helvetica Neue', sans-serif !default;
 $fontIcon: 'icons' !default;
 
-$fontSmall: 13px !default;
-$fontBase: 16px  !default;
-$fontMedium: 20px !default;
-$fontLarge: 26px !default;
-$fontXLarge: 42px !default;
-$fontXXLarge: 68px !default;
-$fontHuge: 110px !default;
+$fontSmall: 0.618em !default;
+$fontBase: 1em  !default;
+$fontMedium: 1.618em !default;
+$fontLarge: 2.618em !default;
+$fontXLarge: 4.236em !default;
+$fontHuge: 6.854em !default;
 
 // Defining baseline line height
 $lineHeight: 26px !default;

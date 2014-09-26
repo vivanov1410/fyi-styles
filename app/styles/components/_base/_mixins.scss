@@ -127,25 +127,14 @@
   padding-bottom: 0;
 }
 
-@mixin rule--xxlarge {
+@mixin rule--huge {
   font-family: $fontHighlight;
-  font-size: $fontXXLarge;
+  font-size: $fontHuge;
   font-weight: 300;
   line-height: 1.1471em; /* 78px */
   padding-top: 0.3824em;
   padding-bottom: 0;
 }
-
-@mixin rule--huge {
-  font-family: $fontHighlight;
-  font-size: $fontHuge;
-  font-weight: 300;
-  line-height: 1.19em; /* 130px */
-  padding-top: 0.2364em;
-  padding-bottom: 0;
-}
-
-
 
 // Mixins to determine which rule to use at which breakpoint
 @mixin type--small($isFromMixin: false) {
@@ -192,21 +181,9 @@
   }
 }
 
-@mixin type--xxlarge($isFromMixin: false) {
-  @if $isFromMixin == false {
-    @include type--xlarge(true);
-    @include wide {
-      @include rule--xxlarge;
-    }
-  }
-  @else {
-    @include rule--xxlarge;
-  }
-}
-
 @mixin type--huge($isFromMixin: false) {
   @if $isFromMixin == false {
-    @include type--xxlarge(true);
+    @include type--xlarge(true);
     @include wide {
       @include rule--huge;
     }
@@ -215,7 +192,6 @@
     @include rule--huge;
   }
 }
-
 
 // LISTS
 @mixin bullet-type($bullet, $icon: false) {
