@@ -12,7 +12,7 @@
 
     <title>Visual Style Guide | FYi Styles</title>
   </head>
-  <body class="page--styleguide" ng-controller="StyleguideCtrl">
+  <body class="page--styleguide" ng-app="app" ng-controller="StyleguideCtrl">
 
     <div class="l-container">
       <h1>FYi <strong>Styles</strong></h1>
@@ -623,52 +623,16 @@
         <p>The color palette starts with primary colors and fills in the spectrum to create a complete and usable palette Web and Mobile. The primary colors are the 500 range.</p>
         
         <div class="clear">
-          <div class="l-g--third">
+          <div class="l-g--third" ng-class="{'l-g--last': ($index + 1) % 3 === 0}" ng-repeat="color in colors">
             <ul class="list--reset clear">
-              <li class="color--main" style="background-color: #004f71;">
-                <span class="color__name">Blue</span>
+              <li class="color--main" style="background-color: {{color.ranges[500]}};">
+                <span class="color__name">{{color.name}}</span>
                 <span class="color__range">500</span>
-                <span class="color__hex">#004f71</span>
+                <span class="color__hex">{{color.ranges[500]}}</span>
               </li>
-              <li class="color--tint" style="background-color: #e5edf0;">
-                <span class="color__range">50</span>
-                <span class="color__hex">#e5edf0</span>
-              </li>
-              <li class="color--tint" style="background-color: #ccdbe2;">
-                <span class="color__range">100</span>
-                <span class="color__hex">#ccdbe2</span>
-              </li>
-              <li class="color--tint" style="background-color: #99b8c6;">
-                <span class="color__range">200</span>
-                <span class="color__hex">#99b8c6</span>
-              </li>
-              <li class="color--tint" style="background-color: #6695a9;">
-                <span class="color__range">300</span>
-                <span class="color__hex">#6695a9</span>
-              </li>
-              <li class="color--tint" style="background-color: #32728d;">
-                <span class="color__range">400</span>
-                <span class="color__hex">#32728d</span>
-              </li>
-              <li class="color--shade" style="background-color: #004f71;">
-                <span class="color__range">500</span>
-                <span class="color__hex">#004f71</span>
-              </li>
-              <li class="color--shade" style="background-color: #003f5a;">
-                <span class="color__range">600</span>
-                <span class="color__hex">#003f5a</span>
-              </li>
-              <li class="color--shade" style="background-color: #00374f;">
-                <span class="color__range">700</span>
-                <span class="color__hex">#00374f</span>
-              </li>
-              <li class="color--shade" style="background-color: #002f43;">
-                <span class="color__range">800</span>
-                <span class="color__hex">#002f43</span>
-              </li>
-              <li class="color--shade" style="background-color: #002738;">
-                <span class="color__range">900</span>
-                <span class="color__hex">#002738</span>
+              <li ng-class="{ 'color--tint': key < 500, 'color--shade': key >= 500 }" style="background-color: {{color.ranges[key]}};" ng-repeat="key in keys(color.ranges)">
+                <span class="color__range">{{key}}</span>
+                <span class="color__hex">{{color.ranges[key]}}</span>
               </li>
             </ul>
           </div>
@@ -1066,11 +1030,8 @@
         <p><a href="#">Back to top</a></p>
       </div>
     </footer>
-
-    <script>
-      angular.module('app').controller('StyleguideCtrl'. function () {
-        console.log('popa');
-      });
-    </script>
+    
+    <script src="bower_components/angular/angular.js"></script>
+    <script src="scripts/main/styleguide/styleguide.controller.js"></script>
   </body>
 </html>
