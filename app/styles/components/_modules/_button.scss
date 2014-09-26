@@ -13,47 +13,100 @@
 
   text-align: center;
 
-  font-family: $fontHighlight;
-  font-weight: 600;
+  font-family: $fontDefault;
+  font-weight: normal;
   text-decoration: none;
 
+  cursor: pointer;
   outline: 0;
+
+  border: 1px solid transparent;
+  background-image: none;
+  white-space: nowrap;
+
+  border-radius: $borderRadiusBase;
+  -webkit-border-radius: $borderRadiusBase;
+  -moz-border-radius: $borderRadiusBase;
 
   transition: none;
 
-  &:hover {
-    background: #4d4d4d;
+  &:hover,
+  &:focus {
+    background: transparent;
     color: #ffffff;
-    border: 1px solid #4d4d4d;
+    border: 1px solid transparent;
     text-decoration: none;
+  }
+
+  &.disabled,
+  &[disabled],
+  fieldset[disabled] & {
+    cursor: not-allowed;
+    pointer-events: none; // Future-proof disabling of clicks
+    opacity: 0.65;
+  }
+
+}
+
+// Alternate buttons
+
+/**
+ * Creates a different style for buttons as well as :hover, :focus, :active, .active, disabled options.
+ * @param {string} $textColor - color name
+ * @param {string} $background - background name
+ * @param {string} $border - border name
+ */
+@mixin style-button($textColor, $background, $border) {
+  color: $textColor;
+  background: $background;
+  border-color: $border;
+
+  &:hover,
+  &:focus,
+  &:active,
+  &.active {
+    color: $textColor;
+    background: darken($background, 5%);
+    border-color: darken($border, 8%);
   }
 }
 
-/**
- * Creates a button
- * @param {string} $color
- * @param {string} $textColor
- * @param {bool} $isInverted (false)
- */
-@mixin style-button($color, $textColor, $isInverted: false) {
-  background: $color;
-  color: $textColor;
-  border: 1px solid darken($color, 10%);
-
-  @if $isInverted { border-color: transparent;}
+.button--default {
+  @extend .button;
+  @include style-button($buttonDefaultColor, $buttonDefaultBg, $buttonDefaultBorder);
 }
 
 .button--primary {
   @extend .button;
-  @include style-button(#4285f4, #ffffff);
+  @include style-button($buttonPrimaryColor, $buttonPrimaryBg, $buttonPrimaryBorder);
 }
 
-.button--secondary {
+.button--success {
   @extend .button;
-  @include style-button(#ffffff, $brandBlueColor);
+  @include style-button($buttonSuccessColor, $buttonSuccessBg, $buttonSuccessBorder);
 }
 
-.button--secondary-variation {
+.button--info {
   @extend .button;
-  @include style-button(#ffffff, $brandBlueColor, true);
+  @include style-button($buttonInfoColor, $buttonInfoBg, $buttonInfoBorder);
+}
+
+.button--warning {
+  @extend .button;
+  @include style-button($buttonWarningColor, $buttonWarningBg, $buttonWarningBorder);
+}
+
+.button--danger {
+  @extend .button;
+  @include style-button($buttonDangerColor, $buttonDangerBg, $buttonDangerBorder);
+}
+
+.button--link {
+  @extend .button;
+  @include style-button($buttonLinkColor, $buttonLinkBg, $buttonLinkBorder);
+  &:hover {
+    background: $buttonLinkBg;
+    color: darken($buttonLinkColor, 10%);
+    text-decoration: underline;
+  }
 }
