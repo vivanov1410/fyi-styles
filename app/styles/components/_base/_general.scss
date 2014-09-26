@@ -27,8 +27,3 @@ body {
 
   @include baseline-grid();
 }
-
-pre {
-  background: $bodyBgColor;
-  padding: 13px;
-}
