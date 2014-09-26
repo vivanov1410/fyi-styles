@@ -12,7 +12,7 @@
 
     <title>Visual Style Guide | FYi Styles</title>
   </head>
-  <body class="page--styleguide">
+  <body class="page--styleguide" ng-controller="StyleguideCtrl">
 
     <div class="l-container">
       <h1>FYi <strong>Styles</strong></h1>
@@ -617,7 +617,7 @@
 
       <!-- Color Palette Start -->
       <a name="color-palette"></a>
-      <section class="color-palette">
+      <section>
         <h2 class="subsection-title">Color Palette</h2>
 
         <p>The color palette starts with primary colors and fills in the spectrum to create a complete and usable palette Web and Mobile. The primary colors are the 500 range.</p>
@@ -625,446 +625,50 @@
         <div class="clear">
           <div class="l-g--third">
             <ul class="list--reset clear">
-              <li class="color color--main" style="background-color: #004f71;">
-                <span class="name light">Blue</span>
-                <span class="shade light">500</span>
-                <span class="hex light">#004f71</span>
-              </li>
-              <li class="color" style="background-color: #e5edf0;">
-                <span class="shade dark">50</span>
-                <span class="hex dark">#e5edf0</span>
-              </li>
-              <li class="color" style="background-color: #ccdbe2;">
-                <span class="shade dark">100</span>
-                <span class="hex dark">#ccdbe2</span>
-              </li>
-              <li class="color" style="background-color: #99b8c6;">
-                <span class="shade dark">200</span>
-                <span class="hex dark">#99b8c6</span>
-              </li>
-              <li class="color" style="background-color: #6695a9;">
-                <span class="shade dark">300</span>
-                <span class="hex dark">#6695a9</span>
-              </li>
-              <li class="color" style="background-color: #32728d;">
-                <span class="shade dark">400</span>
-                <span class="hex dark">#32728d</span>
-              </li>
-              <li class="color" style="background-color: #004f71;">
-                <span class="shade light">500</span>
-                <span class="hex light">#004f71</span>
-              </li>
-              <li class="color" style="background-color: #003f5a;">
-                <span class="shade light">600</span>
-                <span class="hex light">#003f5a</span>
-              </li>
-              <li class="color" style="background-color: #00374f;">
-                <span class="shade light">700</span>
-                <span class="hex light">#00374f</span>
-              </li>
-              <li class="color" style="background-color: #002f43;">
-                <span class="shade light">800</span>
-                <span class="hex light">#002f43</span>
-              </li>
-              <li class="color" style="background-color: #002738;">
-                <span class="shade light">900</span>
-                <span class="hex light">#002738</span>
-              </li>
-            </ul>
-          </div>
-          <div class="l-g--third">
-            <ul class="list--reset clear">
-              <li class="color color--main" style="background-color: #e51c23;">
-                <span class="name light">Red</span>
-                <span class="shade light">500</span>
-                <span class="hex light">#e51c23</span>
-              </li>
-              <li class="color" style="background-color: #fde0dc;">
-                <span class="shade dark">50</span>
-                <span class="hex dark">#fde0dc</span>
-              </li>
-              <li class="color" style="background-color: #f9bdbb;">
-                <span class="shade dark">100</span>
-                <span class="hex dark">#f9bdbb</span>
-              </li>
-              <li class="color" style="background-color: #f69988;">
-                <span class="shade dark">200</span>
-                <span class="hex dark">#f69988</span>
-              </li>
-              <li class="color" style="background-color: #f36c60;">
-                <span class="shade dark">300</span>
-                <span class="hex dark">#f36c60</span>
-              </li>
-              <li class="color" style="background-color: #e84e40;">
-                <span class="shade dark">400</span>
-                <span class="hex dark">#e84e40</span>
-              </li>
-              <li class="color" style="background-color: #e51c23;">
-                <span class="shade light">500</span>
-                <span class="hex light">#e51c23</span>
-              </li>
-              <li class="color" style="background-color: #dd191d;">
-                <span class="shade light">600</span>
-                <span class="hex light">#dd191d</span>
-              </li>
-              <li class="color" style="background-color: #d01716;">
-                <span class="shade light">700</span>
-                <span class="hex light">#d01716</span>
-              </li>
-              <li class="color" style="background-color: #c41411;">
-                <span class="shade light">800</span>
-                <span class="hex light">#c41411</span>
-              </li>
-              <li class="color" style="background-color: #b0120a;">
-                <span class="shade light">900</span>
-                <span class="hex light">#b0120a</span>
-              </li>
-            </ul>
-          </div>
-          <div class="l-g--third l-g--last">
-            <ul class="list--reset clear">
-              <li class="color color--main" style="background-color: #009688;">
-                <span class="name light">Teal</span>
-                <span class="shade light">500</span>
-                <span class="hex light">#009688</span>
-              </li>
-              <li class="color" style="background-color: #e0f2f1;">
-                <span class="shade dark">50</span>
-                <span class="hex dark">#e0f2f1</span>
-              </li>
-              <li class="color" style="background-color: #b2dfdb;">
-                <span class="shade dark">100</span>
-                <span class="hex dark">#b2dfdb</span>
-              </li>
-              <li class="color" style="background-color: #80cbc4;">
-                <span class="shade dark">200</span>
-                <span class="hex dark">#80cbc4</span>
-              </li>
-              <li class="color" style="background-color: #4db6ac;">
-                <span class="shade dark">300</span>
-                <span class="hex dark">#4db6ac</span>
-              </li>
-              <li class="color" style="background-color: #26a69a;">
-                <span class="shade dark">400</span>
-                <span class="hex dark">#26a69a</span>
-              </li>
-              <li class="color" style="background-color: #009688;">
-                <span class="shade light">500</span>
-                <span class="hex light">#009688</span>
-              </li>
-              <li class="color" style="background-color: #00897b;">
-                <span class="shade light">600</span>
-                <span class="hex light">#00897b</span>
-              </li>
-              <li class="color" style="background-color: #00796b;">
-                <span class="shade light">700</span>
-                <span class="hex light">#00796b</span>
-              </li>
-              <li class="color" style="background-color: #00695c;">
-                <span class="shade light">800</span>
-                <span class="hex light">#00695c</span>
-              </li>
-              <li class="color" style="background-color: #004d40;">
-                <span class="shade light">900</span>
-                <span class="hex light">#004d40</span>
-              </li>
-            </ul>
-          </div>
-          <div class="l-g--third">
-            <ul class="list--reset clear">
-              <li class="color color--main" style="background-color: #ff9800;">
-                <span class="name light">Orange Light</span>
-                <span class="shade light">500</span>
-                <span class="hex light">#ff9800</span>
-              </li>
-              <li class="color" style="background-color: #fff3e0;">
-                <span class="shade dark">50</span>
-                <span class="hex dark">#fff3e0</span>
-              </li>
-              <li class="color" style="background-color: #ffe0b2;">
-                <span class="shade dark">100</span>
-                <span class="hex dark">#ffe0b2</span>
-              </li>
-              <li class="color" style="background-color: #ffcc80;">
-                <span class="shade dark">200</span>
-                <span class="hex dark">#ffcc80</span>
-              </li>
-              <li class="color" style="background-color: #ffb74d;">
-                <span class="shade dark">300</span>
-                <span class="hex dark">#ffb74d</span>
-              </li>
-              <li class="color" style="background-color: #ffa726;">
-                <span class="shade dark">400</span>
-                <span class="hex dark">#ffa726</span>
-              </li>
-              <li class="color" style="background-color: #ff9800;">
-                <span class="shade light">500</span>
-                <span class="hex light">#ff9800</span>
-              </li>
-              <li class="color" style="background-color: #fb8c00;">
-                <span class="shade light">600</span>
-                <span class="hex light">#fb8c00</span>
-              </li>
-              <li class="color" style="background-color: #f57c00;">
-                <span class="shade light">700</span>
-                <span class="hex light">#f57c00</span>
-              </li>
-              <li class="color" style="background-color: #ef6c00;">
-                <span class="shade light">800</span>
-                <span class="hex light">#ef6c00</span>
-              </li>
-              <li class="color" style="background-color: #e65100;">
-                <span class="shade light">900</span>
-                <span class="hex light">#e65100</span>
-              </li>
-            </ul>
-          </div>
-          <div class="l-g--third">
-            <ul class="list--reset clear">
-              <li class="color color--main" style="background-color: #ff5722;">
-                <span class="name light">Orange Deep</span>
-                <span class="shade light">500</span>
-                <span class="hex light">#ff5722</span>
-              </li>
-              <li class="color" style="background-color: #fbe9e7;">
-                <span class="shade dark">50</span>
-                <span class="hex dark">#fbe9e7</span>
-              </li>
-              <li class="color" style="background-color: #ffccbc;">
-                <span class="shade dark">100</span>
-                <span class="hex dark">#ffccbc</span>
-              </li>
-              <li class="color" style="background-color: #ffab91;">
-                <span class="shade dark">200</span>
-                <span class="hex dark">#ffab91</span>
-              </li>
-              <li class="color" style="background-color: #ff8a65;">
-                <span class="shade dark">300</span>
-                <span class="hex dark">#ff8a65</span>
-              </li>
-              <li class="color" style="background-color: #ff7043;">
-                <span class="shade dark">400</span>
-                <span class="hex dark">#ff7043</span>
-              </li>
-              <li class="color" style="background-color: #ff5722;">
-                <span class="shade light">500</span>
-                <span class="hex light">#ff5722</span>
-              </li>
-              <li class="color" style="background-color: #f4511e;">
-                <span class="shade light">600</span>
-                <span class="hex light">#f4511e</span>
-              </li>
-              <li class="color" style="background-color: #e64a19;">
-                <span class="shade light">700</span>
-                <span class="hex light">#e64a19</span>
-              </li>
-              <li class="color" style="background-color: #d84315;">
-                <span class="shade light">800</span>
-                <span class="hex light">#d84315</span>
-              </li>
-              <li class="color" style="background-color: #bf360c;">
-                <span class="shade light">900</span>
-                <span class="hex light">#bf360c</span>
-              </li>
-            </ul>
-          </div>
-          <div class="l-g--third l-g--last">
-            <ul class="list--reset clear">
-              <li class="color color--main" style="background-color: #8bc34a;">
-                <span class="name light">Green Deep</span>
-                <span class="shade light">500</span>
-                <span class="hex light">#8bc34a</span>
-              </li>
-              <li class="color" style="background-color: #f1f8e9;">
-                <span class="shade dark">50</span>
-                <span class="hex dark">#f1f8e9</span>
-              </li>
-              <li class="color" style="background-color: #dcedc8;">
-                <span class="shade dark">100</span>
-                <span class="hex dark">#dcedc8</span>
-              </li>
-              <li class="color" style="background-color: #c5e1a5;">
-                <span class="shade dark">200</span>
-                <span class="hex dark">#c5e1a5</span>
-              </li>
-              <li class="color" style="background-color: #aed581;">
-                <span class="shade dark">300</span>
-                <span class="hex dark">#aed581</span>
-              </li>
-              <li class="color" style="background-color: #9ccc65;">
-                <span class="shade dark">400</span>
-                <span class="hex dark">#9ccc65</span>
-              </li>
-              <li class="color" style="background-color: #8bc34a;">
-                <span class="shade light">500</span>
-                <span class="hex light">#8bc34a</span>
-              </li>
-              <li class="color" style="background-color: #7cb342;">
-                <span class="shade light">600</span>
-                <span class="hex light">#7cb342</span>
-              </li>
-              <li class="color" style="background-color: #689f38;">
-                <span class="shade light">700</span>
-                <span class="hex light">#689f38</span>
-              </li>
-              <li class="color" style="background-color: #558b2f;">
-                <span class="shade light">800</span>
-                <span class="hex light">#558b2f</span>
-              </li>
-              <li class="color" style="background-color: #33691e;">
-                <span class="shade light">900</span>
-                <span class="hex light">#33691e</span>
-              </li>
-            </ul>
-          </div>
-          <div class="l-g--third">
-            <ul class="list--reset clear">
-              <li class="color color--main" style="background-color: #ffc107;">
-                <span class="name light">Amber</span>
-                <span class="shade light">500</span>
-                <span class="hex light">#ffc107</span>
-              </li>
-              <li class="color" style="background-color: #fff8e1;">
-                <span class="shade dark">50</span>
-                <span class="hex dark">#fff8e1</span>
-              </li>
-              <li class="color" style="background-color: #ffecb3;">
-                <span class="shade dark">100</span>
-                <span class="hex dark">#ffecb3</span>
-              </li>
-              <li class="color" style="background-color: #ffe082;">
-                <span class="shade dark">200</span>
-                <span class="hex dark">#ffe082</span>
-              </li>
-              <li class="color" style="background-color: #ffd54f;">
-                <span class="shade dark">300</span>
-                <span class="hex dark">#ffd54f</span>
-              </li>
-              <li class="color" style="background-color: #ffca28;">
-                <span class="shade dark">400</span>
-                <span class="hex dark">#ffca28</span>
-              </li>
-              <li class="color" style="background-color: #ffc107;">
-                <span class="shade light">500</span>
-                <span class="hex light">#ffc107</span>
-              </li>
-              <li class="color" style="background-color: #ffb300;">
-                <span class="shade light">600</span>
-                <span class="hex light">#ffb300</span>
-              </li>
-              <li class="color" style="background-color: #ffa000;">
-                <span class="shade light">700</span>
-                <span class="hex light">#ffa000</span>
-              </li>
-              <li class="color" style="background-color: #ff8f00;">
-                <span class="shade light">800</span>
-                <span class="hex light">#ff8f00</span>
-              </li>
-              <li class="color" style="background-color: #ff6f00;">
-                <span class="shade light">900</span>
-                <span class="hex light">#ff6f00</span>
-              </li>
-            </ul>
-          </div>
-          <div class="l-g--third">
-            <ul class="list--reset clear">
-              <li class="color color--main" style="background-color: #607d8b;">
-                <span class="name light">Grey Blue</span>
-                <span class="shade light">500</span>
-                <span class="hex light">#607d8b</span>
-              </li>
-              <li class="color" style="background-color: #eceff1;">
-                <span class="shade dark">50</span>
-                <span class="hex dark">#eceff1</span>
-              </li>
-              <li class="color" style="background-color: #cfd8dc;">
-                <span class="shade dark">100</span>
-                <span class="hex dark">#cfd8dc</span>
-              </li>
-              <li class="color" style="background-color: #b0bec5;">
-                <span class="shade dark">200</span>
-                <span class="hex dark">#b0bec5</span>
-              </li>
-              <li class="color" style="background-color: #90a4ae;">
-                <span class="shade dark">300</span>
-                <span class="hex dark">#90a4ae</span>
-              </li>
-              <li class="color" style="background-color: #78909c;">
-                <span class="shade dark">400</span>
-                <span class="hex dark">#78909c</span>
-              </li>
-              <li class="color" style="background-color: #607d8b;">
-                <span class="shade light">500</span>
-                <span class="hex light">#607d8b</span>
-              </li>
-              <li class="color" style="background-color: #546e7a;">
-                <span class="shade light">600</span>
-                <span class="hex light">#546e7a</span>
-              </li>
-              <li class="color" style="background-color: #455a64;">
-                <span class="shade light">700</span>
-                <span class="hex light">#455a64</span>
-              </li>
-              <li class="color" style="background-color: #37474f;">
-                <span class="shade light">800</span>
-                <span class="hex light">#37474f</span>
-              </li>
-              <li class="color" style="background-color: #263238;">
-                <span class="shade light">900</span>
-                <span class="hex light">#263238</span>
-              </li>
-            </ul>
-          </div>
-          <div class="l-g--third l-g--last">
-            <ul class="list--reset clear">
-              <li class="color color--main" style="background-color: #9e9e9e;">
-                <span class="name light">Grey</span>
-                <span class="shade light">500</span>
-                <span class="hex light">#9e9e9e</span>
-              </li>
-              <li class="color" style="background-color: #fafafa;">
-                <span class="shade dark">50</span>
-                <span class="hex dark">#fafafa</span>
-              </li>
-              <li class="color" style="background-color: #f5f5f5;">
-                <span class="shade dark">100</span>
-                <span class="hex dark">#f5f5f5</span>
-              </li>
-              <li class="color" style="background-color: #eeeeee;">
-                <span class="shade dark">200</span>
-                <span class="hex dark">#eeeeee</span>
-              </li>
-              <li class="color" style="background-color: #e0e0e0;">
-                <span class="shade dark">300</span>
-                <span class="hex dark">#e0e0e0</span>
-              </li>
-              <li class="color" style="background-color: #bdbdbd;">
-                <span class="shade dark">400</span>
-                <span class="hex dark">#bdbdbd</span>
-              </li>
-              <li class="color" style="background-color: #9e9e9e;">
-                <span class="shade light">500</span>
-                <span class="hex light">#9e9e9e</span>
-              </li>
-              <li class="color" style="background-color: #757575;">
-                <span class="shade light">600</span>
-                <span class="hex light">#757575</span>
-              </li>
-              <li class="color" style="background-color: #616161;">
-                <span class="shade light">700</span>
-                <span class="hex light">#616161</span>
-              </li>
-              <li class="color" style="background-color: #424242;">
-                <span class="shade light">800</span>
-                <span class="hex light">#424242</span>
-              </li>
-              <li class="color" style="background-color: #212121;">
-                <span class="shade light">900</span>
-                <span class="hex light">#212121</span>
-              </li>
-              <li class="color" style="background-color: #000000;">
-                <span class="shade light">900</span>
-                <span class="hex light">#000000</span>
+              <li class="color--main" style="background-color: #004f71;">
+                <span class="color__name">Blue</span>
+                <span class="color__range">500</span>
+                <span class="color__hex">#004f71</span>
+              </li>
+              <li class="color--tint" style="background-color: #e5edf0;">
+                <span class="color__range">50</span>
+                <span class="color__hex">#e5edf0</span>
+              </li>
+              <li class="color--tint" style="background-color: #ccdbe2;">
+                <span class="color__range">100</span>
+                <span class="color__hex">#ccdbe2</span>
+              </li>
+              <li class="color--tint" style="background-color: #99b8c6;">
+                <span class="color__range">200</span>
+                <span class="color__hex">#99b8c6</span>
+              </li>
+              <li class="color--tint" style="background-color: #6695a9;">
+                <span class="color__range">300</span>
+                <span class="color__hex">#6695a9</span>
+              </li>
+              <li class="color--tint" style="background-color: #32728d;">
+                <span class="color__range">400</span>
+                <span class="color__hex">#32728d</span>
+              </li>
+              <li class="color--shade" style="background-color: #004f71;">
+                <span class="color__range">500</span>
+                <span class="color__hex">#004f71</span>
+              </li>
+              <li class="color--shade" style="background-color: #003f5a;">
+                <span class="color__range">600</span>
+                <span class="color__hex">#003f5a</span>
+              </li>
+              <li class="color--shade" style="background-color: #00374f;">
+                <span class="color__range">700</span>
+                <span class="color__hex">#00374f</span>
+              </li>
+              <li class="color--shade" style="background-color: #002f43;">
+                <span class="color__range">800</span>
+                <span class="color__hex">#002f43</span>
+              </li>
+              <li class="color--shade" style="background-color: #002738;">
+                <span class="color__range">900</span>
+                <span class="color__hex">#002738</span>
               </li>
             </ul>
           </div>
@@ -1462,5 +1066,11 @@
         <p><a href="#">Back to top</a></p>
       </div>
     </footer>
+
+    <script>
+      angular.module('app').controller('StyleguideCtrl'. function () {
+        console.log('popa');
+      });
+    </script>
   </body>
 </html>

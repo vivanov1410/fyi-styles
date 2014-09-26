@@ -9,15 +9,15 @@
 
   .breadcrumbs {
     text-align: left;
-    color: $colorBlue;
+    color: $brandBlueColor;
 
     a {
-      color: $colorBlue;
+      color: $brandBlueColor;
     }
   }
 
   h3 {
-    color: $colorGrayDark;
+    color: $greyDarkColor;
     padding-top: $lineHeight * 2;
   }
 }

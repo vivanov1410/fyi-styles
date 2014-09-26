@@ -42,31 +42,45 @@ body.open {
 /**
  * Modules
  */
-.color-palette {
-  .color {
-    padding: 15px;
-    list-style-type: none;
+.color {
+  padding: 15px;
+  list-style-type: none;
+}
 
-    .hex {
-      display: block;
-      float: right;
-    }
+.color--main {
+  @extend .color;
 
-    .light {
-      color: #fff;
-    }
+  color: #fff;
+}
 
-    .dark {
-      color: #000;
-    }
+.color--tint {
+  @extend .color;
 
-    &.color--main {
-      .name {
-        display: block;
-        margin-bottom: 60px;
-      }
-    }
+  color: $greyDarkColor;
+}
+
+.color--shade {
+  @extend .color;
+
+  color: #fff;
+}
+
+.color__name {
+  padding-left: 15px;
+
+  .color--main & {
+    display: block;
+    margin-bottom: 60px;
   }
+}
+
+.color__range {
+  padding-left: 15px;
+}
+
+.color__hex {
+  display: block;
+  float: right;
 }
 
 .page--styleguide {
@@ -98,7 +112,7 @@ body.open {
   }
 
   .styleguide__theme-block {
-    background: $colorLayouts;
+    background: white;
     padding: 0 13px;
   }
 
@@ -111,7 +125,7 @@ body.open {
 
 .demo {
   [class*="g-"] {
-    background-color: $colorGrayLight;
+    background-color: $greyLightColor;
     position: relative;
     margin-bottom: $lineHeight;
     min-height: $lineHeight*6;
@@ -133,6 +147,17 @@ body.open {
       word-spacing: 15px;
     }
   }
+}
+
+.subsection-title {
+  color: $greyDarkColor;
+  margin-top: $lineHeight * 2;
+}
+
+.subsection-number {
+  @include type--base;
+  padding-top: 0;
+  display: block;
 }
 
 .app-bar {
