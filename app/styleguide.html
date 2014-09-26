@@ -8,6 +8,8 @@
     <meta itemprop="name" content="Visual Style Guide — Web Starter Kit">
     <meta itemprop="description" content="Visual style guide used by this site.">
 
+    <link rel="stylesheet" href="external_components/highlight/styles/github.css">
+
     <link rel="stylesheet" href="styles/app.css">
 
     <title>Visual Style Guide | FYi Styles</title>
@@ -48,8 +50,7 @@
 
     <div class="l-container">
       <!-- Typography Start -->
-      <a name="typography"></a>
-      <section class="docs-section">
+      <section id="typography" class="docs-section">
         <h2>Typography</h2>
 
         <div class="docs-section__example">
@@ -62,12 +63,14 @@
         </div>
         <div class="docs-section__highlight">
           <pre>
-            <span class="nt">&lt;h1&gt;</span>Heading 1<span class="nt">&lt;/h1&gt;</span>
-            <span class="nt">&lt;h2&gt;</span>Heading 2<span class="nt">&lt;/h2&gt;</span>
-            <span class="nt">&lt;h3&gt;</span>Heading 3<span class="nt">&lt;/h3&gt;</span>
-            <span class="nt">&lt;h4&gt;</span>Heading 4<span class="nt">&lt;/h4&gt;</span>
-            <span class="nt">&lt;h5&gt;</span>Heading 5<span class="nt">&lt;/h5&gt;</span>
-            <span class="nt">&lt;h6&gt;</span>Heading 6<span class="nt">&lt;/h6&gt;</span>
+            <code class="html">
+              &lt;h1&gt;Heading 1&lt;/h1&gt;
+              &lt;h2&gt;Heading 2&lt;/h2&gt;
+              &lt;h3&gt;Heading 3&lt;/h3&gt;
+              &lt;h4&gt;Heading 4&lt;/h4&gt;
+              &lt;h5&gt;Heading 5&lt;/h5&gt;
+              &lt;h6&gt;Heading 6&lt;/h6&gt;
+            </code>
           </pre>
         </div>  
       </section>
@@ -1022,6 +1025,9 @@
         <p><a href="#">Back to top</a></p>
       </div>
     </footer>
+
+    <script src="external_components/highlight/highlight.pack.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
 
     <script src="bower_components/angular/angular.js"></script>
     <script src="scripts/main/styleguide/styleguide.controller.js"></script>
