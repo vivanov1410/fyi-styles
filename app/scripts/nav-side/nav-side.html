@@ -1,49 +1,20 @@
 <div class="nav--side__wrapper">
   <span class="nav--side__logo"><img src="//material-design.storage.googleapis.com/images/Google_Logo.svg" alt="Google logo"></span>
+
   <nav>
     <ul class="nav--side__list">
-      <li class="nav--side__item">
-        <a href="#/developer-guide/typography">Typography</a>
+      <li class="nav--side__item" ng-repeat="item in menu">
+        <a ng-href="#{{item.link}}">{{item.title}}</a>
         <ul class="nav--side__submenu">
-          <li><a href="#/developer-guide/typography">Headings</a></li>
-        </ul>
-      </li>
-
-      <li class="nav--side__item">
-        <a href="#/developer-guide/buttons">Buttons</a>
-        <ul class="nav--side__submenu">
-          <li><a href="#colors-palette">Palette</a></li>
-          <li><a href="#colors-brand">Brand</a></li>
-        </ul>
-      </li>
-
-      <li class="nav--side__item">
-        <a href="#/developer-guide/colors">Colors</a>
-        <ul class="nav--side__submenu">
-          <li><a href="#colors-palette">Palette</a></li>
-          <li><a href="#colors-brand">Brand</a></li>
+          <li ng-repeat="subitem in item.submenu">
+            <a ng-href="#{{subitem.link}}">{{subitem.title}}</a>
+          </li>
         </ul>
       </li>
     </ul>
   </nav>
+
   <div class="nav--side__legal">
     <p>&copy; 2014 <a href="http://fyidoctors.com">FYidoctors</a></p>
   </div>
 </div>
-
-<script>
-  $(function () {
-    'use strict';
-
-    $('.nav--side__submenu').hide();
-    $('.nav--side__item a').on('click', function () {
-      var content = $(this).next('.nav--side__submenu');
-      if(!content.is(':visible')) {
-        content.slideDown();
-      }
-      else {
-        content.slideUp();
-      }
-    });
-  });
-</script>
