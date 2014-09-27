@@ -63,7 +63,7 @@
 
     <div class="summary-header">
       <div class="l-container">
-        <h2 class="summary-header__title">Visual Style Guide</h2>
+        <h2>Visual Style Guide</h2>
         <ol class="summary-header__anchor-list  list-links">
           <li class="summary-header__anchors-item"><a href="#color-palette">Color Palette</a></li>
           <li class="summary-header__anchors-item"><a href="#buttons">Buttons</a></li>
@@ -122,28 +122,59 @@
       <!-- Buttons Start -->
       <a name="buttons"></a>
       <section class="styleguide__buttons">
-        <h2 class="subsection-title"><strong class="subsection-number">#02</strong> Buttons</h2>
+        <h2>Buttons</h2>
 
         <div>
-          <h4>Primary</h4>
-          <div class="code-sample">
-            <a href="#ignore-click" class="button--primary">Use our tool</a>
+          <h3>Button variant</h3>
+          <p>Use any of the available button classes to quickly create a styled button</p>
+          <button type="button" class="button--default">Default</button>
+          <button type="button" class="button--primary">Primary</button>
+          <button type="button" class="button--success">Success</button>
+          <button type="button" class="button--info">Info</button>
+          <button type="button" class="button--warning">Warning</button>
+          <button type="button" class="button--danger">Danger</button>
+          <button type="button" class="button--link">Link</button>
+        </div>
+
+        <div>
+          <h3>Disabled state</h3>
+          <p>Make buttons look unclickable by fading them back 50%</p>
+          
+          <div>
+          <h4>Button element</h4>
+          <p>Add the <code>disabled</code> attribute to <code>&lt;button&gt;</code> buttons.</p>
+            <button type="button" class="button--default" disabled="disabled">Default</button>
+            <button type="button" class="button--primary" disabled="disabled">Primary</button>
+            <button type="button" class="button--success" disabled="disabled">Success</button>
+            <button type="button" class="button--info" disabled="disabled">Info</button>
+            <button type="button" class="button--warning" disabled="disabled">Warning</button>
+            <button type="button" class="button--danger" disabled="disabled">Danger</button>
+            <button type="button" class="button--link" disabled="disabled">Link</button>
+          </div>
+          
+          <div>
+          <h4>Anchor element</h4>
+            <p>Add the <code>.disabled</code> class to <code>&lt;a&gt;</code> buttons.</p>
+            <a href="#ignore-click" class="button--primary disabled">Primary Link</a>
+            <a href="#ignore-click" class="button--default disabled">Link</a>
           </div>
         </div>
 
         <div>
-          <h4>Secondary</h4>
-          <div>
-            <div class="code-sample">
-              <a href="#ignore-click" class="button--secondary">Use our tool</a>
-            </div>
-          </div>
+          <h3>Active state</h3>
+          <p>Buttons will appear pressed (with a darker background, darker border, and inset shadow) when active. For <code>&lt;button&gt;</code> elements, this is done via <code>:active</code>. For <code>&lt;a&gt;</code> elements, it's done with <code>.active</code>. However, you may use <code>.active</code> on <code>&lt;button&gt;</code>s should you need to replicate the active state programmatically.</p>
 
-          <div class="code-sample">
-            <div class="styleguide__inverted-block">
-              <a href="#ignore-click" class="button--secondary-variation">Use our tool</a>
-            </div>
-          </div>
+          <h4>Button element</h4>
+          <p>No need to add <code>:active</code> as it's a pseudo-class, but if you need to force the same appearance, go ahead and add <code>.active</code>.</p>
+          <button type="button" class="button--default disabled">Default</button>
+          <button type="button" class="button--primary disabled">Primary</button>
+          <button type="button" class="button--success disabled">Success</button>
+
+          <h4>Anchor element</h4>
+          <p>Add the <code>.active</code> class to <code>&lt;a&gt;</code> buttons.</p>
+          <a href="#ignore-click" class="button--default disabled">Link</a>
+          <a href="#ignore-click" class="button--primary disabled">Primary Link</a>
+          <a href="#ignore-click" class="button--success disabled">Success Link</a>
         </div>
       </section>
       <!-- Buttons End -->
