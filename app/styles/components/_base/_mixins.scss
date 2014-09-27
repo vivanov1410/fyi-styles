@@ -216,18 +216,6 @@
   }
 }
 
-@mixin numbered-list() {
-  &::before {
-    counter-increment: list;
-    content: '0' counter(list);
-    color: inherit;
-    font-weight: 400;
-    display: inline-block;
-    position: absolute;
-    left: 0;
-  }
-}
-
 // Mixin to create links
 @mixin style-cta($textColor, $linkIcon: false) {
   font-family: $fontHighlight;

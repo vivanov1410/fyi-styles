@@ -25,7 +25,6 @@ ul li {
 ol {
   counter-reset: list;
   > li {
-    @include numbered-list;
     position: relative;
     padding-left: 32px;
 

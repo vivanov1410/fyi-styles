@@ -14,9 +14,10 @@ $greyColor:								darken(#fff, 54%) !default;
 $greyLightColor:					darken(#fff, 26%) !default;
 $greyLighterColor:				darken(#fff, 12%) !default;
 
-$brandBlueDarkColor:			map-get($blue, 700) !default; // #00374f
-$brandBlueColor:					map-get($blue, 500) !default; // #004f71
-$brandBlueLightColor:			map-get($blue, 100) !default; // #ccdbe2
+$brandBlueDarkColor:       map-get($blue, 700) !default; // #00374f
+$brandBlueColor:           map-get($blue, 500) !default; // #004f71
+$brandBlueLightColor:      map-get($blue, 100) !default; // #ccdbe2
+$brandBlueLightestColor:   map-get($blue, 50) !default; // #ccdbe2
 
 $brandOrangeDarkColor:		map-get($deep-orange, 700) !default; // #e64a19
 $brandOrangeColor:				map-get($deep-orange, 500) !default; // #ff5722
