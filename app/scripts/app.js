@@ -1,7 +1,7 @@
 'use strict';
 
-angular.module('fyi-styles', ['ui.router'])
-.config(function ($stateProvider, $urlRouterProvider, $locationProvider) {
+angular.module('fyi-styles', ['ui.router', 'hljs'])
+.config(function ($stateProvider, $urlRouterProvider, $locationProvider, hljsServiceProvider) {
 
   $urlRouterProvider.otherwise('/get-started');
 
@@ -37,4 +37,8 @@ angular.module('fyi-styles', ['ui.router'])
       templateUrl: 'scripts/developer-guide/colors/colors.html',
       controller: 'ColorsCtrl'
     });
+
+  hljsServiceProvider.setOptions({
+    tabReplace: '    '
+  });
 });

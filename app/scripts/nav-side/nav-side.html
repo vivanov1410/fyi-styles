@@ -1,37 +1,43 @@
 <div class="nav--side__wrapper">
+  <span class="nav--side__logo"><img src="//material-design.storage.googleapis.com/images/Google_Logo.svg" alt="Google logo"></span>
   <nav>
-    <ul>
-      <li>
-        <a href="#/developer-guide/typography" class="nav--side__item">Typography</a>
-        <ul class="nav--side__content">
+    <ul class="nav--side__list">
+      <li class="nav--side__item">
+        <a href="#/developer-guide/typography">Typography</a>
+        <ul class="nav--side__submenu">
           <li><a href="#/developer-guide/typography">Headings</a></li>
         </ul>
       </li>
 
-      <li>
-        <a href="#/developer-guide/buttons" class="nav--side__item">Buttons</a>
-        <ul class="nav--side__content">
+      <li class="nav--side__item">
+        <a href="#/developer-guide/buttons">Buttons</a>
+        <ul class="nav--side__submenu">
           <li><a href="#colors-palette">Palette</a></li>
           <li><a href="#colors-brand">Brand</a></li>
         </ul>
       </li>
 
-      <li>
-        <a href="#/developer-guide/colors" class="nav--side__item">Colors</a>
-        <ul class="nav--side__content">
+      <li class="nav--side__item">
+        <a href="#/developer-guide/colors">Colors</a>
+        <ul class="nav--side__submenu">
           <li><a href="#colors-palette">Palette</a></li>
           <li><a href="#colors-brand">Brand</a></li>
         </ul>
       </li>
     </ul>
   </nav>
+  <div class="nav--side__legal">
+    <p>&copy; 2014 <a href="http://fyidoctors.com">FYidoctors</a></p>
+  </div>
 </div>
 
 <script>
   $(function () {
-    $('.nav--side__content').hide();
-    $('.nav--side__item').on('click', function () {
-      var content = $(this).next('.nav--side__content');
+    'use strict';
+
+    $('.nav--side__submenu').hide();
+    $('.nav--side__item a').on('click', function () {
+      var content = $(this).next('.nav--side__submenu');
       if(!content.is(':visible')) {
         content.slideDown();
       }

@@ -31,10 +31,6 @@ body {
   min-height: 100%;
 }
 
-body.open {
-  overflow: hidden;
-}
-
 /**
  * Layouts
  */
@@ -106,7 +102,7 @@ body.open {
     color: #959595;
     text-transform: uppercase;
     letter-spacing: 1px;
-    content: "Example";
+    content: 'Example';
   }
 }
 
@@ -131,6 +127,12 @@ body.open {
     white-space: pre-line;
     background-color: transparent;
     border: 0;
+
+    code {
+      font-size: inherit;
+      color: #333;
+      background-color: transparent;
+    }
   }
 }
 
@@ -151,6 +153,60 @@ body.open {
   min-height: 100%;
   padding-bottom: 96px;
   position: relative;
+}
+
+.nav--side__logo {
+  border-bottom: 1px solid #e0e0e0;
+  display: block;
+  height: 60px;
+  margin: auto;
+  padding: 12px 24px 10px 24px;
+  position: relative;
+
+  img {
+    height: 40px;
+    width: 90px;
+  }
+}
+
+.nav--side__list {
+  padding-left: 5px;
+  font-size: $fontBase;
+}
+
+.nav--side__item {
+  padding-top: 15px;
+  padding-bottom: 15px;
+  cursor: pointer;
+
+  & > a {
+    text-decoration: none;
+    color: $greyDarkColor;
+    font-weight: bold;
+  }
+}
+
+.nav--side__submenu {
+  padding-left: 5px;
+  font-size: 0.8em;
+  font-weight: normal;
+
+  a {
+    text-decoration: none;
+    color: $greyDarkColor;
+  }
+}
+
+.nav--side__legal {
+  border-top: 1px solid #e0e0e0;
+  bottom: 0;
+  color: #212121;
+  font-size: 13px;
+  height: 96px;
+  line-height: 24px;
+  padding: 24px;
+  position: absolute;
+  width: 100%;
 }
 
 .app-bar {
