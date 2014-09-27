@@ -1,0 +1,35 @@
+<div class="nav--side__wrapper">
+  <nav>
+    <ul>
+      <li>
+        <a href="#typography" class="nav--side__item">Typography</a>
+        <ul class="nav--side__content">
+          <li><a href="#typography-headings">Headings</a></li>
+        </ul>
+      </li>
+
+      <li>
+        <a href="#colors" class="nav--side__item">Colors</a>
+        <ul class="nav--side__content">
+          <li><a href="#colors-palette">Palette</a></li>
+          <li><a href="#colors-brand">Brand</a></li>
+        </ul>
+      </li>
+    </ul>
+  </nav>
+</div>
+
+<script>
+  $(function () {
+    $('.nav--side__content').hide();
+    $('.nav--side__item').on('click', function () {
+      var content = $(this).next('.nav--side__content');
+      if(!content.is(':visible')) {
+        content.slideDown();
+      }
+      else {
+        content.slideUp();
+      }
+    });
+  });
+</script>
