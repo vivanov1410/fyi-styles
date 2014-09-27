@@ -1,7 +1,7 @@
 'use strict';
 
-var app = angular.module('app', []);
-app.controller('StyleguideCtrl', function ($scope) {
+angular.module('fyi-styles')
+.controller('ColorsCtrl', function ($scope) {
   
 	$scope.colors = [
 		{

@@ -17,8 +17,24 @@ angular.module('fyi-styles', ['ui.router'])
       controller: 'BrandingGuideCtrl'
     })
     .state('developer-guide', {
+      abstract: true,
       url: '/developer-guide',
       templateUrl: 'scripts/developer-guide/developer-guide.html',
       controller: 'DeveloperGuideCtrl'
+    })
+    .state('developer-guide.typography', {
+      url: '/typography',
+      templateUrl: 'scripts/developer-guide/typography/typography.html',
+      controller: 'TypographyCtrl'
+    })
+    .state('developer-guide.buttons', {
+      url: '/buttons',
+      templateUrl: 'scripts/developer-guide/buttons/buttons.html',
+      controller: 'ButtonsCtrl'
+    })
+    .state('developer-guide.colors', {
+      url: '/colors',
+      templateUrl: 'scripts/developer-guide/colors/colors.html',
+      controller: 'ColorsCtrl'
     });
 });

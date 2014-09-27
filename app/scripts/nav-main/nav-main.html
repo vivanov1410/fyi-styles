@@ -1,6 +1,4 @@
 <h4>Navigation</h4>
 <ul>
-  <li><a href="#/get-started">Get Started</a></li>
-  <li><a href="#/branding-guide">Brand Guide</a></li>
-  <li><a href="#/developer-guide">Developer Guide</a></li>
+  <li class="nav__item" ng-class="{'is-active': active(item.route)}" ng-repeat="item in menu"><a ng-href="#{{item.link}}">{{item.title}}</a></li>
 </ul>
