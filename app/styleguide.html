@@ -12,9 +12,50 @@
 
     <link rel="stylesheet" href="styles/app.css">
 
+    <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+
     <title>Visual Style Guide | FYi Styles</title>
   </head>
   <body class="page--styleguide" ng-app="app" ng-controller="StyleguideCtrl">
+
+    <div class="side-nav">
+      <div class="side-nav__wrapper">
+        <nav>
+          <ul>
+            <li>
+              <a href="#typography" class="side-nav__item">Typography</a>
+              <ul class="side-nav__content">
+                <li><a href="#typography-headings">Headings</a></li>
+              </ul>
+            </li>
+
+            <li>
+              <a href="#colors" class="side-nav__item">Colors</a>
+              <ul class="side-nav__content">
+                <li><a href="#colors-palette">Palette</a></li>
+                <li><a href="#colors-brand">Brand</a></li>
+              </ul>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+
+    <script>
+      $(function () {
+        $('.side-nav__content').hide();
+        $('.side-nav__item').on('click', function () {
+          var content = $(this).next('.side-nav__content');
+          if(!content.is(':visible')) {
+            content.slideDown();
+          }
+          else {
+            content.slideUp();
+          }
+        });
+      });
+    </script>
 
     <div class="l-container">
       <h1>FYi <strong>Styles</strong></h1>
@@ -24,7 +65,6 @@
       <div class="l-container">
         <h2 class="summary-header__title">Visual Style Guide</h2>
         <ol class="summary-header__anchor-list  list-links">
-          <li class="summary-header__anchors-item"><a href="#typography">Typography</a></li>
           <li class="summary-header__anchors-item"><a href="#color-palette">Color Palette</a></li>
           <li class="summary-header__anchors-item"><a href="#buttons">Buttons</a></li>
           <li class="summary-header__anchors-item"><a href="#lists">Lists</a></li>
@@ -51,7 +91,10 @@
     <div class="l-container">
       <!-- Typography Start -->
       <section id="typography" class="docs-section">
-        <h2>Typography</h2>
+        <h2 id="typography">Typography</h2>
+        <h3 id="typography-headings">Headings</h3>
+        
+        <p>All HTML headings, h1 through h6, are available. .h1 through .h6 classes are also available, for when you want to match the font styling of a heading but still want your text to be displayed inline.</p>
 
         <div class="docs-section__example">
           <h1>Heading 1</h1>
@@ -611,9 +654,9 @@
       <!-- Grid End -->
 
       <!-- Color Palette Start -->
-      <a name="color-palette"></a>
       <section>
-        <h2>Color Palette</h2>
+        <h2 id="colors">Colors</h2>
+        <h3 id="colors-palette">Palette</h3>
 
         <p>The color palette starts with primary colors and fills in the spectrum to create a complete and usable palette Web and Mobile. The primary colors are the 500 range.</p>
         

@@ -16,6 +16,7 @@
   "strict": true,
   "globals": {
     "angular": true,
-    "hljs": true
+    "hljs": true,
+    "$": true
   }
 }

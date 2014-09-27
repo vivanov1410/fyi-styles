@@ -49,16 +49,9 @@ $ npm install --global gulp
 This will install Gulp globally. Depending on your user account, you may need to gain elevated permissions using `sudo` (i.e `sudo npm install --global gulp`). Next, install the local dependencies Web Starter Kit requires:
 
 ```sh
-$ sudo npm install
+$ npm install
 ```
 
 That's it! You should now have everything needed to use the Web Starter Kit.
-
-# Getting the code
-
-Once you have all of the dependencies installed, you only need to get the code.
-[Download](https://github.com/google/web-starter-kit/archive/v0.4.0.zip) a zip of version 0.4.0.
-Extract the files where you want to work from.
-Then start building awesome things!
 
 You may also want to get used to some of the [commands](commands.md) available.

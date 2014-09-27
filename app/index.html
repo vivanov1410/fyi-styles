@@ -1,9 +1,10 @@
 <!doctype html>
-<html lang="">
+<html lang="en">
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="description" content="A front-end template that helps you build fast, modern mobile web apps.">
+    <base href="/">
+    <meta name="description" content="FYi Styles Website.">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>FYi Styles</title>
 
@@ -21,44 +22,57 @@
     <meta name="msapplication-TileImage" content="images/touch/ms-touch-icon-144x144-precomposed.png">
     <meta name="msapplication-TileColor" content="#3372DF">
 
+    <!-- Vendor styles -->
+    <link rel="stylesheet" href="external_components/highlight/styles/github.css">
+
     <!-- App styles -->
     <link rel="stylesheet" href="styles/app.css">
   </head>
-  <body>
-    <header class="app-bar promote-layer">
+  <body ng-app="fyi-styles">
+
+    <header class="app-bar">
       <div class="app-bar-container">
         <button class="menu"><img src="images/hamburger.svg" alt="Menu"></button>
-        <h1 class="logo">Web <strong>Starter Kit</strong></h1>
+        <h1 class="logo">FYi <strong>doctors</strong></h1>
         <section class="app-bar-actions">
         <!-- Put App Bar Buttons Here -->
-        <button><i class="icon icon-star"></i></button>
+        <button><i class="icon icon-star">Popa</i></button>
+        <button><i class="icon icon-star">Zhopa</i></button>
         </section>
       </div>
     </header>
 
-    <nav class="navdrawer-container promote-layer">
+    <nav class="navdrawer-container">
       <h4>Navigation</h4>
       <ul>
-        <li><a href="#hello">Hello</a></li>
-        <li><a href="#get-started">Get Started</a></li>
-        <li><a href="styleguide.html">Style Guide</a></li>
+        <li><a href="#/get-started">Get Started</a></li>
+        <li><a href="#/branding-guide">Brand Guide</a></li>
+        <li><a href="#/developer-guide">Developer Guide</a></li>
       </ul>
     </nav>
 
     <main>
-      <h1 id="hello">Hello!</h1>
-      <p>Welcome to Web Starter Kit.</p>
-
-      <h2 id="get-started">Get Started.</h2>
-      <p>Read how to <a href="http://developers.google.com/web/starter-kit">Get Started</a> or check out the <a href="styleguide.html">Style Guide</a>.</p>
+      <div ui-view=""></div>
     </main>
 
-    <footer>
-      <p>&copy; 2014 <a href="#">FYidoctors</a></p>
+    <footer class="footer--main">
+      <div class="l-container">
+        <p>&copy; 2014 <a href="http://fyidoctors.com">FYidoctors</a></p>
+      </div>
     </footer>
 
+    <!-- build:js scripts/vendor.min.js -->
+    <script src="bower_components/jquery/dist/jquery.js"></script>
+    <script src="bower_components/angular/angular.js"></script>
+    <script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+    <!-- endbuild -->
+  
     <!-- build:js scripts/app.min.js -->
     <script src="scripts/app.js"></script>
+    <script src="scripts/get-started/get-started.controller.js"></script>
+    <script src="scripts/branding-guide/branding-guide.controller.js"></script>
+    <script src="scripts/developer-guide/developer-guide.controller.js"></script>
+    <script src="scripts/styleguide/styleguide.controller.js"></script>
     <!-- endbuild -->
   </body>
 </html>

@@ -134,6 +134,25 @@ body.open {
   }
 }
 
+.side-nav {
+  border-right: 1px solid #e0e0e0;
+  bottom: 0;
+  background: #fff;
+  color: #333;
+  display: block;
+  left: 0;
+  position: fixed;
+  top: 0;
+  width: 240px;
+  z-index: 4;
+}
+
+.side-nav__wrapper {
+  min-height: 100%;
+  padding-bottom: 96px;
+  position: relative;
+}
+
 .page--styleguide {
   .styleguide__module-title {
     margin-bottom: $lineHeight;

@@ -1,32 +1,12 @@
-/**
- *
- *  Web Starter Kit
- *  Copyright 2014 Google Inc. All rights reserved.
- *
- *  Licensed under the Apache License, Version 2.0 (the "License");
- *  you may not use this file except in compliance with the License.
- *  You may obtain a copy of the License at
- *
- *      http://www.apache.org/licenses/LICENSE-2.0
- *
- *  Unless required by applicable law or agreed to in writing, software
- *  distributed under the License is distributed on an "AS IS" BASIS,
- *  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- *  See the License for the specific language governing permissions and
- *  limitations under the License
- *
- */
-
 'use strict';
 
-// Include Gulp & Tools We'll Use
-var gulp = require('gulp');
-var $ = require('gulp-load-plugins')();
-var del = require('del');
-var runSequence = require('run-sequence');
-var browserSync = require('browser-sync');
-var pagespeed = require('psi');
-var reload = browserSync.reload;
+var gulp        = require('gulp'),
+    $           = require('gulp-load-plugins')(),
+    del         = require('del'),
+    runSequence = require('run-sequence'),
+    browserSync = require('browser-sync'),
+    pagespeed   = require('psi'),
+    reload      = browserSync.reload;
 
 var AUTOPREFIXER_BROWSERS = [
   'ie >= 10',
@@ -40,7 +20,9 @@ var AUTOPREFIXER_BROWSERS = [
   'bb >= 10'
 ];
 
-// Lint JavaScript
+/**
+ * Lints Javascript
+ */
 gulp.task('jshint', function () {
   return gulp.src('app/scripts/**/*.js')
     .pipe(reload({stream: true, once: true}))
@@ -49,7 +31,9 @@ gulp.task('jshint', function () {
     .pipe($.if(!browserSync.active, $.jshint.reporter('fail')));
 });
 
-// Optimize Images
+/**
+ * Optimizes Images
+ */
 gulp.task('images', function () {
   return gulp.src('app/images/**/*')
     .pipe($.cache($.imagemin({
@@ -57,37 +41,40 @@ gulp.task('images', function () {
       interlaced: true
     })))
     .pipe(gulp.dest('dist/images'))
-    .pipe($.size({title: 'images'}));
+    .pipe($.size({ title: 'images' }));
 });
 
-// Copy All Files At The Root Level (app)
+/**
+ * Copies All Files At The Root Level (app)
+ */
 gulp.task('copy', function () {
   return gulp.src([
     'app/*',
     '!app/*.html',
-    'node_modules/apache-server-configs/dist/.htaccess'
   ], {
     dot: true
   }).pipe(gulp.dest('dist'))
-    .pipe($.size({title: 'copy'}));
+    .pipe($.size({ title: 'copy' }));
 });
 
-// Copy Web Fonts To Dist
+/**
+ * Copies Web Fonts To Dist
+ */
 gulp.task('fonts', function () {
   return gulp.src(['app/fonts/**'])
     .pipe(gulp.dest('dist/fonts'))
-    .pipe($.size({title: 'fonts'}));
+    .pipe($.size({ title: 'fonts' }));
 });
 
-// Compile and Automatically Prefix Stylesheets
+/**
+ * Compiles and Automatically Prefix Stylesheets
+ */
 gulp.task('styles', function () {
-  // For best performance, don't add Sass partials to `gulp.src`
   return gulp.src([
       'app/styles/*.scss',
-      'app/styles/**/*.css',
       'app/styles/components/components.scss'
     ])
-    .pipe($.changed('styles', {extension: '.scss'}))
+    .pipe($.changed('styles', { extension: '.scss' }))
     .pipe($.rubySass({
         style: 'expanded',
         precision: 10
@@ -96,20 +83,19 @@ gulp.task('styles', function () {
     )
     .pipe($.autoprefixer(AUTOPREFIXER_BROWSERS))
     .pipe(gulp.dest('.tmp/styles'))
-    // Concatenate And Minify Styles
     .pipe($.if('*.css', $.csso()))
     .pipe(gulp.dest('dist/styles'))
-    .pipe($.size({title: 'styles'}));
+    .pipe($.size({ title: 'styles' }));
 });
 
-// Scan Your HTML For Assets & Optimize Them
+// Scans Your HTML For Assets & Optimize Them
 gulp.task('html', function () {
   var assets = $.useref.assets({searchPath: '{.tmp,app}'});
 
   return gulp.src('app/**/*.html')
     .pipe(assets)
     // Concatenate And Minify JavaScript
-    .pipe($.if('*.js', $.uglify({preserveComments: 'some'})))
+    .pipe($.if('*.js', $.uglify({ preserveComments: 'some' })))
     // Remove Any Unused CSS
     // Note: If not using the Style Guide, you can delete it from
     // the next line to only include styles your project uses.
@@ -138,53 +124,50 @@ gulp.task('html', function () {
     .pipe($.size({title: 'html'}));
 });
 
-// Clean Output Directory
+/**
+ * Cleans Output Directory
+ */
 gulp.task('clean', del.bind(null, ['.tmp', 'dist']));
 
-// Watch Files For Changes & Reload
+/**
+ * Watches Files For Changes & Reload
+ */
 gulp.task('serve', ['styles'], function () {
   browserSync({
     notify: false,
-    // Run as an https by uncommenting 'https: true'
-    // Note: this uses an unsigned certificate which on first access
-    //       will present a certificate warning in the browser.
-    // https: true,
+    https: false,
     server: ['.tmp', 'app']
   });
 
   gulp.watch(['app/**/*.html'], reload);
-  gulp.watch(['app/styles/**/*.{scss,css}'], ['styles', reload]);
+  gulp.watch(['app/styles/**/*.scss'], ['styles', reload]);
   gulp.watch(['app/scripts/**/*.js'], ['jshint']);
   gulp.watch(['app/images/**/*'], reload);
 });
 
-// Build and serve the output from the dist build
+/**
+ * Build and serve the output from the dist build
+ */
 gulp.task('serve:dist', ['default'], function () {
   browserSync({
     notify: false,
-    // Run as an https by uncommenting 'https: true'
-    // Note: this uses an unsigned certificate which on first access
-    //       will present a certificate warning in the browser.
-    // https: true,
+    https: false,
     server: 'dist'
   });
 });
 
-// Build Production Files, the Default Task
+/**
+ * Build Production Files, the Default Task
+ */
 gulp.task('default', ['clean'], function (cb) {
   runSequence('styles', ['jshint', 'html', 'images', 'fonts', 'copy'], cb);
 });
 
-// Run PageSpeed Insights
-// Update `url` below to the public URL for your site
+/**
+ * Run PageSpeed Insights
+ * @todo add own url and api key
+ */
 gulp.task('pagespeed', pagespeed.bind(null, {
-  // By default, we use the PageSpeed Insights
-  // free (no API key) tier. You can use a Google
-  // Developer API key if you have one. See
-  // http://goo.gl/RkN0vE for info key: 'YOUR_API_KEY'
   url: 'https://example.com',
   strategy: 'mobile'
 }));
-
-// Load custom tasks from the `tasks` directory
-try { require('require-dir')('tasks'); } catch (err) {}
