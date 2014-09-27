@@ -157,7 +157,7 @@ angular.module('fyi-styles')
 		}
 	];
 
-	$scope.keys = function (obj) {
+	$scope.ranges = function (obj) {
 	  return obj ? Object.keys(obj) : [];
 	};
 

@@ -6,16 +6,16 @@
   <p>The color palette starts with primary colors and fills in the spectrum to create a complete and usable palette Web and Mobile. The primary colors are the 500 range.</p>
   
   <div class="clear">
-    <div class="l-g--third" ng-class="{'l-g--last': ($index + 1) % 3 === 0}" ng-repeat="color in colors">
+    <div class="l-g--third" ng-class="{ 'l-g--last': ($index + 1) % 3 === 0 }" ng-repeat="color in colors">
       <ul class="list--reset clear">
         <li class="color--main" style="background-color: {{color.ranges[500]}};">
           <span class="color__name">{{color.name}}</span>
           <span class="color__range">500</span>
           <span class="color__hex">{{color.ranges[500]}}</span>
         </li>
-        <li ng-class="{ 'color--tint': key < 500, 'color--shade': key >= 500 }" style="background-color: {{color.ranges[key]}};" ng-repeat="key in keys(color.ranges)">
-          <span class="color__range">{{key}}</span>
-          <span class="color__hex">{{color.ranges[key]}}</span>
+        <li ng-class="{ 'color--tint': range < 500, 'color--shade': range >= 500 }" style="background-color: {{color.ranges[range]}};" ng-repeat="range in ranges(color.ranges)">
+          <span class="color__range">{{range}}</span>
+          <span class="color__hex">{{color.ranges[range]}}</span>
         </li>
       </ul>
     </div>
