@@ -4,10 +4,10 @@
   <nav>
     <ul class="nav--side__list">
       <li class="nav--side__item" ng-repeat="item in menu">
-        <a ng-href="#{{item.link}}">{{item.title}}</a>
-        <ul class="nav--side__submenu">
+        <a href ng-click="select(item)">{{item.title}}</a>
+        <ul class="nav--side__submenu animation--slide-down" ng-if="item.submenu && item.opened">
           <li ng-repeat="subitem in item.submenu">
-            <a ng-href="#{{subitem.link}}">{{subitem.title}}</a>
+            <a href ng-click="goto(subitem)">{{subitem.title}}</a>
           </li>
         </ul>
       </li>

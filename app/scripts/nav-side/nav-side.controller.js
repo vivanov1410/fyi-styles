@@ -1,59 +1,107 @@
 'use strict';
 
 angular.module('fyi-styles')
-.controller('NavSideCtrl', function ($scope, $timeout) {
+.controller('NavSideCtrl', function ($scope, $timeout, $location, $anchorScroll) {
 
-	$scope.menu = [
-    {
-      title: 'Typography',
-      link: '/developer-guide/typography',
-      submenu: [
-      	{
-      		title: 'Headings'
-      	}
-      ]
-    },
-    {
-      title: 'Colors',
-      link: '/developer-guide/colors',
-      submenu: [
-      	{
-      		title: 'Brand'
-      	},
-      	{
-      		title: 'Pelette'
-      	}
-      ]
-    },
-    {
-      title: 'Buttons',
-      link: '/developer-guide/buttons',
-      submenu: [
-      	{
-      		title: 'Button variant'
-      	},
-      	{
-      		title: 'Disabled state'
-      	},
-      	{
-      		title: 'Active state'
-      	}
-      ]
+	var menus = {
+    'get-started': [
+      {
+        title: 'Download'
+      },
+      {
+        title: 'Boom'
+      }
+    ],
+    'branding-guide': [
+      {
+        title: 'Logo'
+      }
+    ],
+    'developer-guide': [
+      {
+        title: 'Typography',
+        link: '/developer-guide/typography',
+        opened: false,
+        submenu: [
+          {
+            title: 'Headings'
+          }
+        ]
+      },
+      {
+        title: 'Colors',
+        link: '/developer-guide/colors',
+        opened: false,
+        submenu: [
+          {
+            title: 'Brand'
+          },
+          {
+            title: 'Palette'
+          }
+        ]
+      },
+      {
+        title: 'Buttons',
+        link: '/developer-guide/buttons',
+        opened: false,
+        submenu: [
+          {
+            title: 'Types',
+            anchor: 'types'
+          },
+          {
+            title: 'Disabled',
+            anchor: 'disabled'
+          },
+          {
+            title: 'Active',
+            anchor: 'active'
+          }
+        ]
+      }
+    ]
+  };
+
+  // Listens for broadcast messages from controllers to update menu
+  $scope.$on('get-started', function () {
+    $scope.menu = menus['get-started'];
+  });
+
+  $scope.$on('branding-guide', function () {
+    $scope.menu = menus['branding-guide'];
+  });
+
+  $scope.$on('developer-guide', function () {
+    $scope.menu = menus['developer-guide'];
+  });
+
+  $scope.$on('typography', function () {
+    $scope.menu[0].opened = true;
+  });
+
+  $scope.$on('colors', function () {
+    $scope.menu[1].opened = true;
+  });
+
+  $scope.$on('buttons', function () {
+    $scope.menu[2].opened = true;
+  });
+
+  /**
+   * Redirects to menu item and opens submenu
+   * @param  {object} item selected item
+   */
+  $scope.select = function (item) {
+    if(item.submenu) {
+      item.opened = !item.opened; 
     }
-  ];
+    $location.url(item.link);
+  };
 
-  // TODO: fix this
-  $timeout(function() {
-	  $('.nav--side__submenu').hide();
-	  $('.nav--side__item a').on('click', function () {
-	    var content = $(this).next('.nav--side__submenu');
-	    if(!content.is(':visible')) {
-	      content.slideDown();
-	    }
-	    else {
-	      content.slideUp();
-	    }
-	  });
-  }, 100);
+  $scope.goto = function (subitem) {
+    $location.hash(subitem.anchor);
+    $anchorScroll();
+  };
 
 });

@@ -1,6 +1,9 @@
 'use strict';
 
-angular.module('fyi-styles', ['ui.router', 'hljs'])
+angular.module('fyi-styles', [
+  'ngAnimate',
+  'ui.router',
+  'hljs'])
 .config(function ($stateProvider, $urlRouterProvider, $locationProvider, hljsServiceProvider) {
 
   $urlRouterProvider.otherwise('/get-started');

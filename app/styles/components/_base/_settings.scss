@@ -115,6 +115,8 @@ $fontHuge: 6.854em !default;
 
 // Defining baseline line height
 $lineHeight: 26px !default;
+$lineHeightHalf: ($lineHeight / 2) !default;
+$lineHeightThird: ($lineHeight / 3) !default;
 
 /**
  * Animation Easing

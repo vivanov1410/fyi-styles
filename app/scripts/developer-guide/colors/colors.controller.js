@@ -1,8 +1,10 @@
 'use strict';
 
 angular.module('fyi-styles')
-.controller('ColorsCtrl', function ($scope) {
+.controller('ColorsCtrl', function ($rootScope, $scope) {
   
+	$rootScope.$broadcast('colors');
+
 	$scope.colors = [
 		{
 			name: 'Red',

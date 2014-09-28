@@ -1,6 +1,8 @@
 'use strict';
 
 angular.module('fyi-styles')
-.controller('ButtonsCtrl', function ($scope) {
-
+.controller('ButtonsCtrl', function ($rootScope, $scope) {
+	
+	$rootScope.$broadcast('buttons');
+	
 });

@@ -7,51 +7,51 @@
 /**
  * Base
  */
-@import '_base/_palette',
-        '_base/_variables',
-        '_base/_functions',
-        '_base/_mixins',
-        '_base/_normalize',
-        '_base/_general',
-        '_base/_list',
-        '_base/_link',
-        '_base/_table',
-        '_base/_fonts',
-        '_base/_code';
+@import '_base/palette',
+        '_base/settings',
+        '_base/functions',
+        '_base/mixins',
+        '_base/normalize',
+        '_base/general',
+        '_base/list',
+        '_base/link',
+        '_base/table',
+        '_base/fonts',
+        '_base/code';
 
 /**
  * @todo find out where to include icons, maybe base 
  */
-@import '_modules/_icons';
+@import '_modules/icons';
 
 /**
  * Layouts
  */
-@import '_layouts/_grid',
-        '_layouts/_typography',
-        '_layouts/_container',
-        '_layouts/_list',
-        '_layouts/_table',
-        '_layouts/_media',
-        '_layouts/_breadcrumb',
-        '_layouts/_icon-circle';
+@import '_layouts/grid',
+        '_layouts/typography',
+        '_layouts/container',
+        '_layouts/list',
+        '_layouts/table',
+        '_layouts/media',
+        '_layouts/breadcrumb',
+        '_layouts/icon-circle';
 
 /**
  * Modules
  */
-@import '_modules/_icons',
-        '_modules/_button',
-        '_modules/_page-header',
-        '_modules/_nav';
+@import '_modules/icons',
+        '_modules/button',
+        '_modules/page-header',
+        '_modules/nav';
 
 /**
  * States
  */
-@import '_states/_nav';
+@import '_states/nav';
 
 /**
  * Themes
  */
 
 // Make sure this is last to override anything else
-@import '_base/_helpers';
+@import '_base/helpers';
