@@ -42,6 +42,7 @@ angular.module('fyi-styles')
     }
   ];
 
+  // TODO: fix this
   $timeout(function() {
 	  $('.nav--side__submenu').hide();
 	  $('.nav--side__item a').on('click', function () {
@@ -53,6 +54,6 @@ angular.module('fyi-styles')
 	      content.slideUp();
 	    }
 	  });
-  }, 10);
+  }, 100);
 
 });

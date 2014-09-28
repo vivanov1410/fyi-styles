@@ -38,13 +38,13 @@ $linkColor:           		$brandInfoColor !default;
 
 $buttonFontWeight:				normal !default;
 
-$buttonDefaultColor:			$brandBlueColor !default;
-$buttonDefaultBg:					#fff !default;
-$buttonDefaultBorder:			$brandBlueLightColor !default;
-
 $buttonPrimaryColor:			#fff !default;
 $buttonPrimaryBg:					$brandBlueColor !default;
 $buttonPrimaryBorder:			$brandBlueColor !default;
+
+$buttonSecondaryColor:			$brandBlueColor !default;
+$buttonSecondaryBg:					#fff !default;
+$buttonSecondaryBorder:			$brandBlueLightColor !default;
 
 $buttonSuccessColor:			#fff !default;
 $buttonSuccessBg:					$brandSuccessColor !default;

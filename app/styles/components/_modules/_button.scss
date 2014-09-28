@@ -71,14 +71,14 @@
   }
 }
 
-.button--default {
-  @extend .button;
-  @include style-button($buttonDefaultColor, $buttonDefaultBg, $buttonDefaultBorder);
-}
-
 .button--primary {
   @extend .button;
   @include style-button($buttonPrimaryColor, $buttonPrimaryBg, $buttonPrimaryBorder);
+}
+
+.button--secondary {
+  @extend .button;
+  @include style-button($buttonSecondaryColor, $buttonSecondaryBg, $buttonSecondaryBorder);
 }
 
 .button--success {
