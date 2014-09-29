@@ -33,9 +33,7 @@ angular.module('fyi-styles')
         link: '/developer-guide/typography',
         opened: false,
         submenu: [
-          {
-            title: 'Headings'
-          }
+          { title: 'Headings' }
         ]
       },
       {
@@ -43,12 +41,8 @@ angular.module('fyi-styles')
         link: '/developer-guide/colors',
         opened: false,
         submenu: [
-          {
-            title: 'Brand'
-          },
-          {
-            title: 'Palette'
-          }
+          { title: 'Brand' },
+          { title: 'Palette' }
         ]
       },
       {
@@ -56,19 +50,20 @@ angular.module('fyi-styles')
         link: '/developer-guide/buttons',
         opened: false,
         submenu: [
-          {
-            title: 'Types',
-            anchor: 'types'
-          },
-          {
-            title: 'Disabled',
-            anchor: 'disabled'
-          },
-          {
-            title: 'Active',
-            anchor: 'active'
-          }
+          { title: 'Types', anchor: 'types' },
+          { title: 'Disabled', anchor: 'disabled' },
+          { title: 'Active', anchor: 'active'}
         ]
+      },
+      {
+        title: 'Tables',
+        link: '/developer-guide/tables',
+        opened: true,
+        submenu: [
+          { title: 'Basic', anchor: 'basic' },
+          { title: 'Striped', anchor: 'striped' },
+          { title: 'Bordered', anchor: 'bordered' },
+        ] 
       }
     ]
   };
@@ -100,6 +95,10 @@ angular.module('fyi-styles')
 
   $scope.$on('buttons', function () {
     $scope.menu[3].opened = true;
+  });
+
+  $scope.$on('tables', function () {
+    $scope.menu[4].opened = true;
   });
 
   /**
