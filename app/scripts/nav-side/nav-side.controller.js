@@ -25,7 +25,7 @@ angular.module('fyi-styles')
         submenu: [
           { title: 'Introduction', anchor: 'introduction' },
           { title: 'Media queries', anchor: 'media-queries' },
-          { title: 'Grid-options', anchor: 'media-queries' }
+          { title: 'Grid options', anchor: 'grid-options' }
         ]
       },
       {
@@ -86,16 +86,20 @@ angular.module('fyi-styles')
     $scope.menu = menus['developer-guide'];
   });
 
-  $scope.$on('typography', function () {
+  $scope.$on('grid-system', function () {
     $scope.menu[0].opened = true;
   });
 
-  $scope.$on('colors', function () {
+  $scope.$on('typography', function () {
     $scope.menu[1].opened = true;
   });
 
-  $scope.$on('buttons', function () {
+  $scope.$on('colors', function () {
     $scope.menu[2].opened = true;
+  });
+
+  $scope.$on('buttons', function () {
+    $scope.menu[3].opened = true;
   });
 
   /**
