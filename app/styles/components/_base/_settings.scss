@@ -8,29 +8,29 @@
  * Colors
  * Gray and brand colors for use across FYi Styles
  */
-$greyDarkerColor:					darken(#fff, 87%) !default;
-$greyDarkColor:						darken(#fff, 80%) !default;
-$greyColor:								darken(#fff, 54%) !default;
-$greyLightColor:					darken(#fff, 26%) !default;
-$greyLighterColor:				darken(#fff, 12%) !default;
+$grey-darker:							darken(#fff, 87%) !default; // #212121
+$grey-dark:								darken(#fff, 80%) !default; // #333
+$grey:										darken(#fff, 54%) !default; // #757575
+$grey-light:							darken(#fff, 26%) !default; // #bdbdbd
+$grey-lighter:						darken(#fff, 12%) !default; // #e0e0e0
 
-$brandBlueDarkColor:       map-get($blue, 700) !default; // #00374f
-$brandBlueColor:           map-get($blue, 500) !default; // #004f71
-$brandBlueLightColor:      map-get($blue, 100) !default; // #ccdbe2
-$brandBlueLightestColor:   map-get($blue, 50) !default; // #ccdbe2
+$brand-blue-dark:      		map-get($blue-palette, 700) !default; // #00374f
+$brand-blue:           		map-get($blue-palette, 500) !default; // #004f71
+$brand-blue-light:      	map-get($blue-palette, 100) !default; // #ccdbe2
+$brand-blue-lightest:   	map-get($blue-palette, 50) !default; // #e5edf0
 
-$brandOrangeDarkColor:		map-get($deep-orange, 700) !default; // #e64a19
-$brandOrangeColor:				map-get($deep-orange, 500) !default; // #ff5722
-$brandOrangeLightColor:		map-get($deep-orange, 100) !default; // #ffccbc
+$brand-orange-dark:				map-get($deep-orange-palette, 700) !default; // #e64a19
+$brand-orange:						map-get($deep-orange-palette, 500) !default; // #ff5722
+$brand-orange-light:			map-get($deep-orange-palette, 100) !default; // #ffccbc
 
-$brandSuccessColor:				map-get($light-green, 600)		!default; // #8bc34a
-$brandInfoColor:					map-get($cyan, 600)					!default; // #03a9f4
-$brandWarningColor:				map-get($light-orange, 600)	!default; // #ff9800
-$brandDangerColor:				map-get($red, 600)						!default; // #e51c23
+$brand-success:						map-get($light-green-palette, 600)    !default; // #8bc34a
+$brand-info:							map-get($cyan-palette, 600)           !default; // #03a9f4
+$brand-warning:						map-get($light-orange-palette, 600)   !default; // #ff9800
+$brand-danger:						map-get($red-palette, 600)            !default; // #e51c23
 
-$bodyBgColor:         		#fff !default;
-$textColor:           		$greyDarkColor !default;
-$linkColor:           		$brandInfoColor !default;
+$body-bg:         				#fff !default;
+$text-color:           					$grey-dark !default;
+$link-color:           					$brand-info !default;
 
 /**
  * Buttons
@@ -39,30 +39,30 @@ $linkColor:           		$brandInfoColor !default;
 $buttonFontWeight:				normal !default;
 
 $buttonPrimaryColor:			#fff !default;
-$buttonPrimaryBg:					$brandBlueColor !default;
-$buttonPrimaryBorder:			$brandBlueColor !default;
+$buttonPrimaryBg:					$brand-blue !default;
+$buttonPrimaryBorder:			$brand-blue !default;
 
-$buttonSecondaryColor:			$brandBlueColor !default;
+$buttonSecondaryColor:			$brand-blue !default;
 $buttonSecondaryBg:					#fff !default;
-$buttonSecondaryBorder:			$brandBlueLightColor !default;
+$buttonSecondaryBorder:			$brand-blue-light !default;
 
 $buttonSuccessColor:			#fff !default;
-$buttonSuccessBg:					$brandSuccessColor !default;
-$buttonSuccessBorder:			$brandSuccessColor !default;
+$buttonSuccessBg:					$brand-success !default;
+$buttonSuccessBorder:			$brand-success !default;
 
 $buttonInfoColor:					#fff !default;
-$buttonInfoBg:						$brandInfoColor !default;
-$buttonInfoBorder:				$brandInfoColor !default;
+$buttonInfoBg:						$brand-info!default;
+$buttonInfoBorder:				$brand-info!default;
 
 $buttonWarningColor:			#fff !default;
-$buttonWarningBg:					$brandWarningColor !default;
-$buttonWarningBorder:			$brandWarningColor !default;
+$buttonWarningBg:					$brand-warning !default;
+$buttonWarningBorder:			$brand-warning !default;
 
 $buttonDangerColor:				#fff !default;
-$buttonDangerBg:					$brandDangerColor !default;
-$buttonDangerBorder:			$brandDangerColor !default;
+$buttonDangerBg:					$brand-danger !default;
+$buttonDangerBorder:			$brand-danger !default;
 
-$buttonLinkColor:					$brandInfoColor !default;
+$buttonLinkColor:					$brand-info!default;
 $buttonLinkBg:						transparent !default;
 $buttonLinkBorder:				transparent !default;
 

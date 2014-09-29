@@ -9,7 +9,7 @@ table {
   width: 100%;
 
   thead {
-    background: $brandBlueColor;
+    background: $brand-blue;
     color: #ffffff;
   }
 
@@ -27,7 +27,7 @@ table {
   }
 
   tbody {
-    background: $greyColor;
+    background: $grey;
   }
 
   td {
@@ -40,7 +40,7 @@ table {
       content: attr(data-th) " :";
       display: inline-block;
       color: #ffffff;
-      background: $brandBlueColor;
+      background: $brand-blue;
       border-right: 2px solid #ffffff;
       position: absolute;
       top: 0;
