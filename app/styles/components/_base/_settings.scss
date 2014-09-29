@@ -14,10 +14,10 @@ $greyColor:								darken(#fff, 54%) !default;
 $greyLightColor:					darken(#fff, 26%) !default;
 $greyLighterColor:				darken(#fff, 12%) !default;
 
-$brandBlueDarkColor:       map-get($blue, 700) !default; // #00374f
-$brandBlueColor:           map-get($blue, 500) !default; // #004f71
-$brandBlueLightColor:      map-get($blue, 100) !default; // #ccdbe2
-$brandBlueLightestColor:   map-get($blue, 50) !default; // #ccdbe2
+$brandBlueDarkColor:      map-get($blue, 700) !default; // #00374f
+$brandBlueColor:          map-get($blue, 500) !default; // #004f71
+$brandBlueLightColor:     map-get($blue, 100) !default; // #ccdbe2
+$brandBlueLightestColor:  map-get($blue, 50) !default; // #ccdbe2
 
 $brandOrangeDarkColor:		map-get($deep-orange, 700) !default; // #e64a19
 $brandOrangeColor:				map-get($deep-orange, 500) !default; // #ff5722
@@ -42,9 +42,9 @@ $buttonPrimaryColor:			#fff !default;
 $buttonPrimaryBg:					$brandBlueColor !default;
 $buttonPrimaryBorder:			$brandBlueColor !default;
 
-$buttonSecondaryColor:			$brandBlueColor !default;
-$buttonSecondaryBg:					#fff !default;
-$buttonSecondaryBorder:			$brandBlueLightColor !default;
+$buttonSecondaryColor:	  $brandBlueColor !default;
+$buttonSecondaryBg:				#fff !default;
+$buttonSecondaryBorder:		$brandBlueLightColor !default;
 
 $buttonSuccessColor:			#fff !default;
 $buttonSuccessBg:					$brandSuccessColor !default;
@@ -79,7 +79,8 @@ $codeBg:									lighten($buttonDangerBg, 48%) !default;
 $borderRadiusBase:				2px !default;
 
 /**
- * Breakpoints
+ * Media queries breakpoints
+ * Define the breakpoints at which your layout will change, adapting to different screen sizes
  */
 $medium: 620px !default;
 $wide: 800px !default;
@@ -87,15 +88,62 @@ $huge: 1600px !default;
 $mediumContainer: 688px !default;
 $wideContainer: 864px !default;
 
+// Extra small screen / phone
+$screen-xs:                  480px !default;
+$screen-xs-min:              $screen-xs !default;
+$screen-phone:               $screen-xs-min !default;
+
+// Small screen / tablet
+$screen-sm:                  768px !default;
+$screen-sm-min:              $screen-sm !default;
+$screen-tablet:              $screen-sm-min !default;
+
+// Medium screen / desktop
+$screen-md:                  992px !default;
+$screen-md-min:              $screen-md !default;
+$screen-desktop:             $screen-md-min !default;
+
+// Large screen / wide desktop
+$screen-lg:                  1200px !default;
+$screen-lg-min:              $screen-lg !default;
+$screen-lg-desktop:          $screen-lg-min !default;
+
+// So media queries don't overlap when required, provide a maximum
+$screenExtraSmallMax:              ($screen-sm-min - 1) !default;
+$screen-sm-max:              ($screen-md-min - 1) !default;
+$screen-md-max:              ($screen-lg-min - 1) !default;
+
 /**
  * Grid
  */
-$mediumColCount: 3 !default;
-$mediumColWidth: 30.3% !default;
-$mediumGutterWidth: 4.5% !default;
-$wideColCount: 4 !default;
-$wideColWidth: 22.2% !default;
-$wideGutterWidth: 3.7% !default;
+// Number of columns in the grid
+$grid-columns:              12 !default;
+//** Padding between columns. Gets divided in half for the left and right.
+$grid-gutter-width:         30px !default;
+// Navbar collapse
+//** Point at which the navbar becomes uncollapsed.
+$grid-float-breakpoint:     $screen-sm-min !default;
+//** Point at which the navbar begins collapsing.
+$grid-float-breakpoint-max: ($grid-float-breakpoint - 1) !default;
+
+//== Container sizes
+//
+//## Define the maximum width of `.container` for different screen sizes.
+
+// Small screen / tablet
+$container-tablet:             ((720px + $grid-gutter-width)) !default;
+//** For `$screen-sm-min` and up.
+$container-sm:                 $container-tablet !default;
+
+// Medium screen / desktop
+$container-desktop:            ((940px + $grid-gutter-width)) !default;
+//** For `$screen-md-min` and up.
+$container-md:                 $container-desktop !default;
+
+// Large screen / wide desktop
+$container-large-desktop:      ((1140px + $grid-gutter-width)) !default;
+//** For `$screen-lg-min` and up.
+$container-lg:                 $container-large-desktop !default;
 
 /**
  * Font

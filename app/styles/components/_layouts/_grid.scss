@@ -1,148 +1,84 @@
-/**
-*
-* Grid
-*
-**/
+//
+// Grid system
+// --------------------------------------------------
 
-/**
- * Grid classes for medium view
- */
-@include medium-only {
-  @for $i from 1 through $mediumColCount {
-    .l-g-md--#{$i} {
-      @include rule--col(medium);
-      width: ($mediumColWidth*$i) + ($mediumGutterWidth*($i + -1));
-      @if $i == $mediumColCount { margin-right: 0; }
-    }
 
-    @if $i < $mediumColCount {
-      .l-g-md--push-#{$i} {
-        margin-left: ($mediumColWidth*$i) + ($mediumGutterWidth*$i);
-      }
-      .l-g-md--pull-#{$i} {
-        margin-right: ($mediumColWidth*$i) + ($mediumGutterWidth*$i);
-      }
-    }
+// Container widths
+//
+// Set the container width, and override it for fixed navbars in media queries.
+
+.l-container {
+  @include container-fixed();
+
+  @media (min-width: $screen-sm-min) {
+    width: $container-sm;
   }
-
-  .l-g-md--full {
-    @include rule--col(medium);
-    margin-right: 0;
-    width: 100%;
+  @media (min-width: $screen-md-min) {
+    width: $container-md;
   }
-
-  .l-g--third {
-    @include rule--col(medium);
-    width: $mediumColWidth;
+  @media (min-width: $screen-lg-min) {
+    width: $container-lg;
   }
-
-  .l-g--half,
-  .l-g-md--half {
-    @include rule--col(medium);
-    width: 50% - $mediumGutterWidth/2;
-  }
-
-  .l-g-md--last { margin-right: 0; }
-  .l-g-md--last + .l-g-md--half { clear: left; }
-
-  .l-g--pull-half { margin-right: 50% + $mediumGutterWidth/2; }
 }
 
-/**
- * Grid classes for wide view
- */
-@include wide {
-  @for $i from 1 through $wideColCount {
-    .l-g-wide--#{$i} {
-      @include rule--col(wide);
-      width: ($wideColWidth*$i) + ($wideGutterWidth*($i + -1));
-      @if $i == $wideColCount { margin-right: 0; }
-    }
 
-    @if $i < $wideColCount {
-      .l-g-wide--push-#{$i} {
-        margin-left: ($wideColWidth*$i) + ($wideGutterWidth*$i);
-      }
-      .l-g-wide--pull-#{$i} {
-        margin-right: ($wideColWidth*$i) + ($wideGutterWidth*$i);
-      }
-    }
-  }
+// Fluid container
+//
+// Utilizes the mixin meant for fixed width containers, but without any defined
+// width for fluid, full width layouts.
 
-  .l-g-wide--last { margin-right: 0; }
-
-  .l-g-wide--full {
-    @include rule--col(wide);
-    margin-right: 0;
-    width: 100%;
-  }
-
-  .l-g--third {
-    @include rule--col(wide);
-    width: 30.8%;
-  }
-
-  .l-g--half,
-  .l-g-wide--half {
-    @include rule--col(wide);
-    width: 50% - $wideGutterWidth/2;
-  }
-
-  .l-g--pull-half { margin-right: 50% + $wideGutterWidth/2; }
+.l-container-fluid {
+  @include container-fixed();
 }
 
-/**
- * Global 'last' class
- * Should be used with global grid classes, such as 'half' or 'third'
- * @example:
- * <div class="third"></div>
- * <div class="third"></div>
- * <div class="third last"></div>
-*/
-.l-g--last { margin-right: 0; }
 
-/**
- * Global 'centered' class
- */
-.l-g--centered {
-  float: none; // reset float to none so we can center it
-  margin-left: auto;
-  margin-right: auto;
+// Row
+//
+// Rows contain and clear the floats of your columns.
+
+.l-row {
+  @include make-row();
 }
 
-/**
- * Grid overlay
- * Shows users our grid system
- * Only visible when a class 'debug' is added to the body
- */
-.grid-overlay {
-  display: none;
-  pointer-events: none;
 
-  .debug & {
-    @include container(true);
+// Columns
+//
+// Common styles for small and large grid columns
 
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    height: 100%;
-    display: block;
+@include make-grid-columns();
 
-    [class*="g-"] {
-      height: 100%;
-      background-color: rgba(lighten(#000, 35%), .2);
-    }
 
-    @include medium-only {
-      .g-wide--last {
-        display: none;
-      }
-    }
+// Extra small grid
+//
+// Columns, offsets, pushes, and pulls for extra small devices like
+// smartphones.
 
-    @include small-only {
-      display: none;
-    }
-  }
+@include make-grid(xs);
+
+
+// Small grid
+//
+// Columns, offsets, pushes, and pulls for the small device range, from phones
+// to tablets.
+
+@media (min-width: $screen-sm-min) {
+  @include make-grid(sm);
+}
+
+
+// Medium grid
+//
+// Columns, offsets, pushes, and pulls for the desktop device range.
+
+@media (min-width: $screen-md-min) {
+  @include make-grid(md);
+}
+
+
+// Large grid
+//
+// Columns, offsets, pushes, and pulls for the large desktop device range.
+
+@media (min-width: $screen-lg-min) {
+  @include make-grid(lg);
 }
