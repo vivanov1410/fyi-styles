@@ -19,6 +19,16 @@ angular.module('fyi-styles')
     ],
     'developer-guide': [
       {
+        title: 'Grid System',
+        link: '/developer-guide/grid-system',
+        opened: false,
+        submenu: [
+          { title: 'Introduction', anchor: 'introduction' },
+          { title: 'Media queries', anchor: 'media-queries' },
+          { title: 'Grid-options', anchor: 'media-queries' }
+        ]
+      },
+      {
         title: 'Typography',
         link: '/developer-guide/typography',
         opened: false,
