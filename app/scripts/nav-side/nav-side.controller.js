@@ -25,7 +25,7 @@ angular.module('fyi-styles')
         submenu: [
           { title: 'Introduction', anchor: 'introduction' },
           { title: 'Media queries', anchor: 'media-queries' },
-          { title: 'Grid-options', anchor: 'media-queries' }
+          { title: 'Grid options', anchor: 'grid-options' }
         ]
       },
       {
@@ -33,9 +33,7 @@ angular.module('fyi-styles')
         link: '/developer-guide/typography',
         opened: false,
         submenu: [
-          {
-            title: 'Headings'
-          }
+          { title: 'Headings' }
         ]
       },
       {
@@ -43,12 +41,8 @@ angular.module('fyi-styles')
         link: '/developer-guide/colors',
         opened: false,
         submenu: [
-          {
-            title: 'Brand'
-          },
-          {
-            title: 'Palette'
-          }
+          { title: 'Brand' },
+          { title: 'Palette' }
         ]
       },
       {
@@ -56,19 +50,20 @@ angular.module('fyi-styles')
         link: '/developer-guide/buttons',
         opened: false,
         submenu: [
-          {
-            title: 'Types',
-            anchor: 'types'
-          },
-          {
-            title: 'Disabled',
-            anchor: 'disabled'
-          },
-          {
-            title: 'Active',
-            anchor: 'active'
-          }
+          { title: 'Types', anchor: 'types' },
+          { title: 'Disabled', anchor: 'disabled' },
+          { title: 'Active', anchor: 'active'}
         ]
+      },
+      {
+        title: 'Tables',
+        link: '/developer-guide/tables',
+        opened: true,
+        submenu: [
+          { title: 'Basic', anchor: 'basic' },
+          { title: 'Striped', anchor: 'striped' },
+          { title: 'Bordered', anchor: 'bordered' },
+        ] 
       }
     ]
   };
@@ -86,16 +81,24 @@ angular.module('fyi-styles')
     $scope.menu = menus['developer-guide'];
   });
 
-  $scope.$on('typography', function () {
+  $scope.$on('grid-system', function () {
     $scope.menu[0].opened = true;
   });
 
-  $scope.$on('colors', function () {
+  $scope.$on('typography', function () {
     $scope.menu[1].opened = true;
   });
 
-  $scope.$on('buttons', function () {
+  $scope.$on('colors', function () {
     $scope.menu[2].opened = true;
+  });
+
+  $scope.$on('buttons', function () {
+    $scope.menu[3].opened = true;
+  });
+
+  $scope.$on('tables', function () {
+    $scope.menu[4].opened = true;
   });
 
   /**

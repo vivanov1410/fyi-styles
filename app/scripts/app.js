@@ -25,6 +25,11 @@ angular.module('fyi-styles', [
       templateUrl: 'scripts/developer-guide/developer-guide.html',
       controller: 'DeveloperGuideCtrl'
     })
+    .state('developer-guide.grid-system', {
+      url: '/grid-system',
+      templateUrl: 'scripts/developer-guide/grid-system/grid-system.html',
+      controller: 'GridSystemCtrl'
+    })
     .state('developer-guide.typography', {
       url: '/typography',
       templateUrl: 'scripts/developer-guide/typography/typography.html',
@@ -39,6 +44,11 @@ angular.module('fyi-styles', [
       url: '/colors',
       templateUrl: 'scripts/developer-guide/colors/colors.html',
       controller: 'ColorsCtrl'
+    })
+    .state('developer-guide.tables', {
+      url: '/tables',
+      templateUrl: 'scripts/developer-guide/tables/tables.html',
+      controller: 'TablesCtrl'
     });
 
   hljsServiceProvider.setOptions({

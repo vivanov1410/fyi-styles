@@ -16,7 +16,7 @@ angular.module('fyi-styles')
     },
     {
       title: 'Developer Guide',
-      link: '/developer-guide/typography',
+      link: '/developer-guide/grid-system',
       route: 'developer-guide'
     }
   ];
