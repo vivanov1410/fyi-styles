@@ -1,0 +1,18 @@
+/**
+ * Animation
+ */
+
+.animation--slide-down.ng-enter, .animation--slide-down.ng-leave {
+  transition: all cubic-bezier(0.250, 0.460, 0.450, 0.940) 0.1s;
+  overflow: hidden
+}
+
+.animation--slide-down.ng-enter,
+.animation--slide-down.ng-leave.ng-leave-active {
+  max-height:0;
+}
+
+.animation--slide-down.ng-leave,
+.animation--slide-down.ng-enter.ng-enter-active {
+  max-height: 200px;
+}

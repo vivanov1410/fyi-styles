@@ -11,7 +11,7 @@ angular.module('fyi-styles')
     },
     {
       title: 'Branding Guide',
-      link: '/branding-guide',
+      link: '/branding-guide/logo',
       route: 'branding-guide'
     },
     {

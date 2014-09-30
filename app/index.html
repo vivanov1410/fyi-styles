@@ -17,16 +17,16 @@
 
     <!-- Add to homescreen for Chrome on Android -->
     <meta name="mobile-web-app-capable" content="yes">
-    <link rel="icon" sizes="192x192" href="images/touch/chrome-touch-icon-192x192.png">
+    <link rel="icon" sizes="192x192" href="favicon.svg">
 
     <!-- Add to homescreen for Safari on iOS -->
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
     <meta name="apple-mobile-web-app-title" content="Web Starter Kit">
-    <link rel="apple-touch-icon-precomposed" href="apple-touch-icon-precomposed.png">
+    <link rel="icon" href="favicon.svg">
 
     <!-- Tile icon for Win8 (144x144 + tile color) -->
-    <meta name="msapplication-TileImage" content="images/touch/ms-touch-icon-144x144-precomposed.png">
+    <meta name="msapplication-TileImage" content="favicon.svg">
     <meta name="msapplication-TileColor" content="#3372DF">
 
     <!-- Vendor styles -->
@@ -51,8 +51,10 @@
     <nav class="nav--main" ng-include="'scripts/nav-main/nav-main.html'" ng-controller="NavMainCtrl"></nav>
 
     <main>
-      <nav class="nav--side" ng-include="'scripts/nav-side/nav-side.html'" ng-controller="NavSideCtrl"></nav>
-      <div ui-view=""></div>
+      <div class="l-container">
+        <nav class="nav--side" ng-include="'scripts/nav-side/nav-side.html'" ng-controller="NavSideCtrl"></nav>
+        <div ui-view=""></div>
+      </div>
     </main>
 
     <!-- build:js scripts/vendor.min.js -->
@@ -68,6 +70,8 @@
     <script src="scripts/app.js"></script>
     <script src="scripts/get-started/get-started.controller.js"></script>
     <script src="scripts/branding-guide/branding-guide.controller.js"></script>
+    <script src="scripts/branding-guide/logo/logo.controller.js"></script>
+
     <script src="scripts/developer-guide/developer-guide.controller.js"></script>
     <script src="scripts/developer-guide/grid-system/grid-system.controller.js"></script>
     <script src="scripts/developer-guide/typography/typography.controller.js"></script>

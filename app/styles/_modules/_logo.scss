@@ -1,0 +1,30 @@
+/**
+ * Logo
+ */
+
+.logo {
+  margin-top: 10px;
+  list-style: none;
+}
+
+.logo__number {
+  border: 1px solid $grey-light;
+  color: $text-color;
+  height: 30px;
+  line-height: 18px;
+  margin: 0px 10px 10px 0px;
+  padding: 5px;
+  width: 30px;
+  text-align: center;
+  float: left;
+
+  border-radius: 2px;
+}
+
+.logo__title {
+  font-weight: bold;
+}
+
+.logo__description {
+
+}

@@ -19,6 +19,12 @@ angular.module('fyi-styles', [
       templateUrl: 'scripts/branding-guide/branding-guide.html',
       controller: 'BrandingGuideCtrl'
     })
+    .state('branding-guide.logo', {
+      url: '/logo',
+      templateUrl: 'scripts/branding-guide/logo/logo.html',
+      controller: 'LogoCtrl'
+    })
+
     .state('developer-guide', {
       abstract: true,
       url: '/developer-guide',

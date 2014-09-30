@@ -1,0 +1,61 @@
+/**
+ * Docs Section
+ */
+
+.docs-section {
+  margin-bottom: 60px;
+}
+
+.docs-section__example {
+  position: relative;
+  margin-top: $lineHeightThird;
+  padding: 45px 15px 15px;
+  border-style: solid;
+  background-color: #fff;
+  border-color: $grey-light;
+  border-width: 1px;
+  border-radius: 2px 2px 0 0;
+  box-shadow: none;
+
+  &:after {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    font-size: 12px;
+    font-weight: 700;
+    color: $grey;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    content: 'Example';
+  }
+}
+
+.docs-section__highlight {
+  padding: 9px 14px;
+  background-color: $brand-blue-lightest;
+  border: 2px solid $grey-light;
+  border-top: none;
+  border-width: 1px;
+
+  pre {
+    display: block;
+    margin: 0 0 10px;
+    font-size: 13px;
+    line-height: 1.42857143;
+    color: $grey-dark;
+    padding: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+    word-break: normal;
+    word-wrap: break-word;
+    white-space: pre-wrap;
+    background-color: transparent;
+    border: 0;
+
+    code {
+      font-size: inherit;
+      color: $grey-dark;
+      background-color: transparent;
+    }
+  }
+}

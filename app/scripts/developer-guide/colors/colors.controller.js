@@ -5,22 +5,31 @@ angular.module('fyi-styles')
   
 	$rootScope.$broadcast('colors');
 
+	$scope.brandColors = [
+		{ name: '$brand-blue-lightest',	hex: '#e5edf0', range: 50 },
+		{ name: '$brand-blue-light',		hex: '#ccdbe2', range: 100 },
+		{ name: '$brand-blue',					hex: '#004f71', range: 500 },
+		{ name: '$brand-blue-dark',			hex: '#00374f', range: 700 },
+
+		{ name: '$brand-orange-light',	hex: '#ffccbc', range: 100 },
+		{ name: '$brand-orange',				hex: '#ff5722', range: 500 },
+		{ name: '$brand-orange-dark',		hex: '#e64a19', range: 700 },
+
+		{ name: '$brand-success',				hex: '#8bc34a', range: 600 },
+		{ name: '$brand-info',					hex: '#03a9f4', range: 600 },
+		{ name: '$brand-warning',				hex: '#ff9800', range: 600 },
+		{ name: '$brand-danger',				hex: '#e51c23', range: 600 }
+	];
+
+	$scope.greyColors = [
+		{ name: '$grey-lighter',				hex: '#e0e0e0', percentage: 12 },
+		{ name: '$grey-light',					hex: '#bdbdbd', percentage: 26 },
+		{ name: '$grey',								hex: '#757575', percentage: 54 },
+		{ name: '$grey-dark',						hex: '#333333', percentage: 80 },
+		{ name: '$grey-darker',					hex: '#212121', percentage: 87 },
+	];
+
 	$scope.colors = [
-		{
-			name: 'Red',
-			ranges: {
-				50:   '#fde0dc',
-			  100:  '#f9bdbb',
-			  200:  '#f69988',
-			  300:  '#f36c60',
-			  400:  '#e84e40',
-			  500:  '#e51c23',
-			  600:  '#dd191d',
-			  700:  '#d01716',
-			  800:  '#c41411',
-			  900:  '#b0120a'
-			}
-		},
 		{
 			name: 'Blue',
 			ranges: {
@@ -67,48 +76,18 @@ angular.module('fyi-styles')
 			}
 		},
 		{
-			name: 'Light Green',
+			name: 'Red',
 			ranges: {
-				50:   '#f1f8e9',
-			  100:  '#dcedc8',
-			  200:  '#c5e1a5',
-			  300:  '#aed581',
-			  400:  '#9ccc65',
-			  500:  '#8bc34a',
-			  600:  '#7cb342',
-			  700:  '#689f38',
-			  800:  '#558b2f',
-			  900:  '#33691e'
-			}
-		},
-		{
-			name: 'Amber',
-			ranges: {
-				50:   '#fff8e1',
-			  100:  '#ffecb3',
-			  200:  '#ffe082',
-			  300:  '#ffd54f',
-			  400:  '#ffca28',
-			  500:  '#ffc107',
-			  600:  '#ffb300',
-			  700:  '#ffa000',
-			  800:  '#ff8f00',
-			  900:  '#ff6f00'
-			}
-		},
-		{
-			name: 'Light Orange',
-			ranges: {
-				50:   '#fff3e0',
-			  100:  '#ffe0b2',
-			  200:  '#ffcc80',
-			  300:  '#ffb74d',
-			  400:  '#ffa726',
-			  500:  '#ff9800',
-			  600:  '#fb8c00',
-			  700:  '#f57c00',
-			  800:  '#ef6c00',
-			  900:  '#e65100'
+				50:   '#fde0dc',
+			  100:  '#f9bdbb',
+			  200:  '#f69988',
+			  300:  '#f36c60',
+			  400:  '#e84e40',
+			  500:  '#e51c23',
+			  600:  '#dd191d',
+			  700:  '#d01716',
+			  800:  '#c41411',
+			  900:  '#b0120a'
 			}
 		},
 		{
@@ -127,6 +106,36 @@ angular.module('fyi-styles')
 			}
 		},
 		{
+			name: 'Light Orange',
+			ranges: {
+				50:   '#fff3e0',
+			  100:  '#ffe0b2',
+			  200:  '#ffcc80',
+			  300:  '#ffb74d',
+			  400:  '#ffa726',
+			  500:  '#ff9800',
+			  600:  '#fb8c00',
+			  700:  '#f57c00',
+			  800:  '#ef6c00',
+			  900:  '#e65100'
+			}
+		},
+		{
+			name: 'Light Green',
+			ranges: {
+				50:   '#f1f8e9',
+			  100:  '#dcedc8',
+			  200:  '#c5e1a5',
+			  300:  '#aed581',
+			  400:  '#9ccc65',
+			  500:  '#8bc34a',
+			  600:  '#7cb342',
+			  700:  '#689f38',
+			  800:  '#558b2f',
+			  900:  '#33691e'
+			}
+		},
+		{
 			name: 'Blue Grey',
 			ranges: {
 				50:   '#eceff1',
@@ -139,22 +148,6 @@ angular.module('fyi-styles')
 			  700:  '#455a64',
 			  800:  '#37474f',
 			  900:  '#263238'
-			}
-		},
-		{
-			name: 'Grey',
-			ranges: {
-				50:   '#fafafa',
-			  100:  '#f5f5f5',
-			  200:  '#eeeeee',
-			  300:  '#e0e0e0',
-			  400:  '#bdbdbd',
-			  500:  '#9e9e9e',
-			  600:  '#757575',
-			  700:  '#616161',
-			  800:  '#424242',
-			  900:  '#212121',
-			  1000: '#000000'
 			}
 		}
 	];
