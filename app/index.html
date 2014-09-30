@@ -51,8 +51,10 @@
     <nav class="nav--main" ng-include="'scripts/nav-main/nav-main.html'" ng-controller="NavMainCtrl"></nav>
 
     <main>
-      <nav class="nav--side" ng-include="'scripts/nav-side/nav-side.html'" ng-controller="NavSideCtrl"></nav>
-      <div ui-view=""></div>
+      <div class="l-container">
+        <nav class="nav--side" ng-include="'scripts/nav-side/nav-side.html'" ng-controller="NavSideCtrl"></nav>
+        <div ui-view=""></div>
+      </div>
     </main>
 
     <!-- build:js scripts/vendor.min.js -->
