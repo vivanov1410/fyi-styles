@@ -57,7 +57,7 @@
  * @param {string} $border - border name
  */
 @mixin style-button($textColor, $background, $border) {
-  color: $text-color;
+  color: $textColor;
   background: $background;
   border-color: $border;
 
@@ -65,7 +65,7 @@
   &:focus,
   &:active,
   &.active {
-    color: $text-color;
+    color: $textColor;
     background: darken($background, 5%);
     border-color: darken($border, 8%);
   }

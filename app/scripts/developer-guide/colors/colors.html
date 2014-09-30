@@ -4,10 +4,10 @@
 
   <h3>Brand</h3>
   <p>Use these colors to guide your designs and layouts, to ensure you’re staying consistent with the FYidoctors  brand.</p>
+  
   <div class="l-row">
     <div class="l-col-md-6">
       <ul class="list--reset">
-
         <!-- Start Gray Colors -->
         <li class="color--brand" ng-class="{ 'color--shade': color.range >= 500, 'color--tint': color.range < 500 }" style="background-color: {{color.hex}};" ng-repeat="color in brandColors">
           <span class="color__name">{{color.name}}</span>
@@ -21,15 +21,13 @@
           <span class="color__hex">{{color.hex}}</span>
           <span class="color__range">{{color.percentage}}%</span>
         </li><!-- End Brand Colors -->
-
       </ul>
     </div>
   </div>
-
   
   <h3 id="colors-palette">Palette</h3>
-
   <p>The color palette starts with primary colors and fills in the spectrum to create a complete and usable palette Web and Mobile. The primary colors are the 500 range.</p>
+
   <div class="l-row">
       <div class="l-col-md-4" ng-class="{ 'l-col-md-4': ($index + 1) % 3 === 0 }" ng-repeat="color in colors">
         <ul class="list--reset clear">
