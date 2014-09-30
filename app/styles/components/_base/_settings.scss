@@ -21,7 +21,8 @@ $brand-blue-lightest:   	map-get($blue-palette, 50) !default; // #e5edf0
 
 $brand-orange-dark:				map-get($deep-orange-palette, 700) !default; // #e64a19
 $brand-orange:						map-get($deep-orange-palette, 500) !default; // #ff5722
-$brand-orange-light:			map-get($deep-orange-palette, 100) !default; // #ffccbc
+$brand-orange-light:      map-get($deep-orange-palette, 100) !default; // #ffccbc
+$brand-orange-lightest:	  map-get($deep-orange-palette, 50) !default; // #ffccbc
 
 $brand-success:						map-get($light-green-palette, 600)    !default; // #8bc34a
 $brand-info:							map-get($cyan-palette, 600)           !default; // #03a9f4
@@ -29,8 +30,8 @@ $brand-warning:						map-get($light-orange-palette, 600)   !default; // #ff9800
 $brand-danger:						map-get($red-palette, 600)            !default; // #e51c23
 
 $body-bg:         				#fff !default;
-$text-color:           					$grey-dark !default;
-$link-color:           					$brand-info !default;
+$text-color:           	  $grey-dark !default;
+$link-color:           		$brand-info !default;
 
 //** Background color for `<body>`.
 $body-bg:               #fff !default;
@@ -132,7 +133,7 @@ $screen-lg-min:              $screen-lg !default;
 $screen-lg-desktop:          $screen-lg-min !default;
 
 // So media queries don't overlap when required, provide a maximum
-$screenExtraSmallMax:        ($screen-sm-min - 1) !default;
+$screen-xs-max:              ($screen-sm-min - 1) !default;
 $screen-sm-max:              ($screen-md-min - 1) !default;
 $screen-md-max:              ($screen-lg-min - 1) !default;
 
@@ -205,3 +206,23 @@ $animationEasing: cubic-bezier(0.455, 0.030, 0.515, 0.955) !default;
  * Sidebar
  */
 $sidebarWidth: 280px !default;
+
+//== Form states and alerts
+//
+//## Define colors for form feedback states and, by default, alerts.
+
+$state-success-text:             #3c763d !default;
+$state-success-bg:               #dff0d8 !default;
+$state-success-border:           darken(adjust-hue($state-success-bg, -10), 5%) !default;
+
+$state-info-text:                #31708f !default;
+$state-info-bg:                  #d9edf7 !default;
+$state-info-border:              darken(adjust-hue($state-info-bg, -10), 7%) !default;
+
+$state-warning-text:             #8a6d3b !default;
+$state-warning-bg:               #fcf8e3 !default;
+$state-warning-border:           darken(adjust-hue($state-warning-bg, -10), 5%) !default;
+
+$state-danger-text:              #a94442 !default;
+$state-danger-bg:                #f2dede !default;
+$state-danger-border:            darken(adjust-hue($state-danger-bg, -10), 5%) !default;

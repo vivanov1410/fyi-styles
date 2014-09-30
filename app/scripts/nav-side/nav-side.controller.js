@@ -67,11 +67,13 @@ angular.module('fyi-styles')
       {
         title: 'Tables',
         link: '/developer-guide/tables',
-        opened: true,
+        opened: false,
         submenu: [
-          { title: 'Basic', anchor: 'basic' },
-          { title: 'Striped', anchor: 'striped' },
-          { title: 'Bordered', anchor: 'bordered' },
+          { title: 'Basic',       anchor: 'tables-basic'      },
+          { title: 'Centered',    anchor: 'tables-centered'   },
+          { title: 'Condensed',   anchor: 'tables-condensed'  },
+          { title: 'Contextual',  anchor: 'tables-contextual' },
+          { title: 'Responsive',  anchor: 'tables-responsive' }
         ] 
       }
     ]

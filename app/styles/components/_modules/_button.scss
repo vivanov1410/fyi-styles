@@ -38,7 +38,7 @@
     text-decoration: none;
   }
 
-  &.disabled,
+  &.is-disabled,
   &[disabled],
   fieldset[disabled] & {
     cursor: not-allowed;
@@ -64,7 +64,7 @@
   &:hover,
   &:focus,
   &:active,
-  &.active {
+  &.is-active {
     color: $textColor;
     background: darken($background, 5%);
     border-color: darken($border, 8%);
