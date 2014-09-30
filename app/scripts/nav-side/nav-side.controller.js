@@ -20,6 +20,7 @@ angular.module('fyi-styles')
         submenu: [
           { title: 'Our logo', anchor: 'our-logo' },
           { title: 'Logo colors', anchor: 'logo-colors' },
+          { title: 'Logo misuse', anchor: 'logo-misuse' },
           { title: 'Spacing', anchor: 'spacing' },
           { title: 'In writing', anchor: 'in-writing' }
         ]

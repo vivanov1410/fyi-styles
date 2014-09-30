@@ -30,6 +30,18 @@
   }
 }
 
+.docs-section__example--clear {
+  position: relative;
+  margin-top: $lineHeightThird;
+  padding: 20px 20px;
+  border-style: solid;
+  background-color: #fff;
+  border-color: $grey-light;
+  border-width: 1px;
+  border-radius: 2px 2px 0 0;
+  box-shadow: none;
+}
+
 .docs-section__highlight {
   padding: 9px 14px;
   background-color: $brand-blue-lightest;
