@@ -14,7 +14,15 @@ angular.module('fyi-styles')
     ],
     'branding-guide': [
       {
-        title: 'Logo'
+        title: 'Logo',
+        link: '/branding-guide/logo',
+        opened: false,
+        submenu: [
+          { title: 'Our logo', anchor: 'our-logo' },
+          { title: 'Logo colors', anchor: 'logo-colors' },
+          { title: 'Spacing', anchor: 'spacing' },
+          { title: 'In writing', anchor: 'in-writing' }
+        ]
       }
     ],
     'developer-guide': [
@@ -75,6 +83,10 @@ angular.module('fyi-styles')
 
   $scope.$on('branding-guide', function () {
     $scope.menu = menus['branding-guide'];
+  });
+
+   $scope.$on('logo', function () {
+    $scope.menu[0].opened = true;
   });
 
   $scope.$on('developer-guide', function () {

@@ -1,0 +1,76 @@
+/**
+ * Nav Side
+ */
+
+.nav--side {
+  border-right: 1px solid $grey-lighter;
+  bottom: 0;
+  background: #fff;
+  color: #333;
+  display: block;
+  left: 0;
+  position: fixed;
+  top: 0;
+  width: 240px;
+  z-index: 4;
+}
+
+.nav--side__wrapper {
+  min-height: 100%;
+  padding-bottom: 96px;
+  position: relative;
+}
+
+.nav--side__logo {
+  border-bottom: 1px solid $grey-lighter;
+  display: block;
+  height: 60px;
+  margin: auto;
+  padding: 12px 24px 10px 24px;
+  position: relative;
+
+  img {
+    width: 150px;
+  }
+}
+
+.nav--side__list {
+  padding-left: 5px;
+  font-size: $fontBase;
+}
+
+.nav--side__item {
+  padding-top: 15px;
+  padding-bottom: 15px;
+  cursor: pointer;
+
+  & > a {
+    text-decoration: none;
+    color: $grey-dark;
+    font-weight: bold;
+  }
+}
+
+.nav--side__submenu {
+  padding-left: 5px;
+  font-size: 0.8em;
+  font-weight: normal;
+  list-style: none;
+
+  a {
+    text-decoration: none;
+    color: $grey-dark;
+  }
+}
+
+.nav--side__legal {
+  border-top: 1px solid $grey-lighter;
+  bottom: 0;
+  color: #212121;
+  font-size: 13px;
+  height: 96px;
+  line-height: 24px;
+  padding: 24px;
+  position: absolute;
+  width: 100%;
+}

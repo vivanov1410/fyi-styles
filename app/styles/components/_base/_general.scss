@@ -22,8 +22,11 @@ body {
   font-family: $fontDefault;
   font-size: $fontBase;
   line-height: 1.6250em; /* 26px */
-  font-weight: 300; // to thicken it a bit, we need to remove font-smoothing
+  font-weight: normal;
   color: $text-color;
+
+  min-height: 100%;
+  position: relative;
 
   @include baseline-grid();
 }

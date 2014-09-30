@@ -1,0 +1,60 @@
+/**
+ * Color
+ */
+
+.color {
+  padding: 15px;
+  list-style-type: none;
+}
+
+.color--main {
+  @extend .color;
+
+  color: #fff;
+}
+
+.color--tint {
+  @extend .color;
+
+  color: $grey-dark;
+}
+
+.color--shade {
+  @extend .color;
+
+  color: #fff;
+}
+
+.color--brand {}
+
+.color__name {
+  padding-left: 15px;
+
+  .color--main & {
+    display: block;
+    margin-bottom: 60px;
+  }
+}
+
+.color__range {
+  padding-left: 15px;
+
+  .color--brand & {
+    display: block;
+    float: right;
+    width: 40px;
+    text-align: center;
+  }
+}
+
+.color__hex {
+  display: block;
+  float: right;
+
+  .color--brand & {
+    display: block;
+    float: right;
+    width: 64px;
+    margin-left: 40px;
+  }
+}
