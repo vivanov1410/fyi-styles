@@ -41,3 +41,16 @@
 .logo__description {
   position: relative;
 }
+
+.logo__icon {
+  float: right;
+  font-size: $fontMedium;
+
+  &.is-allowed {
+    color: $brand-success;
+  }
+
+  &.is-not-allowed {
+    color: $brand-danger;
+  }
+}
