@@ -9,6 +9,7 @@
 }
 
 .logo--preview {
+  @include clearfix();
 
   @extend .logo;
 }
@@ -20,22 +21,22 @@
 }
 
 .logo__number {
-  border: 1px solid $grey-light;
-  color: $brand-blue;
-  height: 40px;
-  line-height: 28px;
-  margin: 0px 10px 10px 0px;
+  float: left;
+  height: 100%;
   padding: 5px;
   width: 40px;
-  text-align: center;
-  float: left;
-
+  margin: 0px 10px 10px 0px;
+  border: 1px solid $grey-light;
   border-radius: 2px;
+  line-height: 28px;
+  text-align: center;
+  color: $brand-blue;
 }
 
 .logo__title {
   color: $brand-blue;
   font-weight: bold;
+  line-height: 16px;
 }
 
 .logo__description {

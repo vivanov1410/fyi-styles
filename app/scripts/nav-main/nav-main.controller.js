@@ -5,7 +5,7 @@ angular.module('fyi-styles')
 
 	$scope.menu = [
     {
-      title: 'Get Started',
+      title: 'Getting Started',
       link: '/get-started',
       route: 'get-started'
     },
