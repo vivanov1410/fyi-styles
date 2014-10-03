@@ -7,7 +7,7 @@
     <li>Rows must be placed within a <code>.l-container</code> (fixed-width) or <code>.l-container-fluid</code> (full-width) for proper alignment and padding.</li>
     <li>Use rows to create horizontal groups of columns.</li>
     <li>Content should be placed within columns, and only columns may be immediate children of rows.</li>
-    <li>Predefined grid classes like <code>.l-row</code> and <code>.l-col-xs-4</code> are available for quickly making grid layouts. Less mixins can also be used for more semantic layouts.</li>
+    <li>Predefined grid classes like <code>.l-row</code> and <code>.l-col-xs-4</code> are available for quickly making grid layouts. Sass mixins can also be used for more semantic layouts.</li>
     <li>Columns create gutters (gaps between column content) via <code>padding</code>. That padding is offset in rows for the first and last column via negative margin on <code>.l-row</code>s.</li>
     <li>The negative margin is why the examples below are outdented. It's so that content within grid columns is lined up with non-grid content.</li>
     <li>Grid columns are created by specifying the number of twelve available columns you wish to span. For example, three equal columns would use three <code>.l-col-xs-4</code>.</li>
@@ -76,7 +76,7 @@
   </div>
 
   <h3 id="media-queries">Media Queries</h3>
-  <p>We use the following media queries in our Less files to create the key breakpoints in our grid system:</p>
+  <p>We use the following media queries in our Sass files to create the key breakpoints in our grid system:</p>
   <div class="docs-section__highlight">
     <div hljs language="css">
 /* Extra small devices (phones, less than 768px) */
@@ -93,7 +93,7 @@
   </div>
 
   <h3 id="grid-options">Grid Options</h3>
-  <p>See how aspects of the Bootstrap grid system work across multiple devices with a handy table.</p>
+  <p>See how aspects of the FYi grid system work across multiple devices with a handy table.</p>
   <div class="table-responsive">
     <table class="table table-bordered table-striped">
       <thead>
