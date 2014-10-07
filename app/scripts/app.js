@@ -55,6 +55,11 @@ angular.module('fyi-styles', [
       url: '/tables',
       templateUrl: 'scripts/developer-guide/tables/tables.html',
       controller: 'TablesCtrl'
+    })
+    .state('developer-guide.pages', {
+      url: '/pages',
+      templateUrl: 'scripts/developer-guide/pages/pages.html',
+      controller: 'PagesCtrl'
     });
 
   hljsServiceProvider.setOptions({

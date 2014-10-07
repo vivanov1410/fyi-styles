@@ -80,7 +80,13 @@ $codeBg:									lighten($buttonDangerBg, 48%) !default;
 /**
  * Components
  */
+
+//**  Border radius
 $borderRadiusBase:				2px !default;
+
+//**  Padding
+$padding-base-vertical: 12px;
+$padding-base-horizontal: 12px;
 
 /**
  * Table
@@ -226,3 +232,21 @@ $state-warning-border:           darken(adjust-hue($state-warning-bg, -10), 5%) 
 $state-danger-text:              #a94442 !default;
 $state-danger-bg:                #f2dede !default;
 $state-danger-border:            darken(adjust-hue($state-danger-bg, -10), 5%) !default;
+
+/**
+ * Forms
+ */
+
+//**  <input> 
+//  Background color 
+$input-bg: #fff !default;
+//  Disabled background color 
+$input-bg-disabled: $grey-lighter !default;
+//  Text color
+$input-color: $grey !default;
+//  Border color
+$input-border: $grey-light !default;
+//  Border color for inputs on focus
+$input-border-focus:  $brand-blue !default;
+//  Border radius
+$input-border-radius: $borderRadiusBase !default;

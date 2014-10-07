@@ -69,12 +69,22 @@ angular.module('fyi-styles')
         link: '/developer-guide/tables',
         opened: false,
         submenu: [
-          { title: 'Basic',       anchor: 'tables-basic'      },
-          { title: 'Centered',    anchor: 'tables-centered'   },
-          { title: 'Condensed',   anchor: 'tables-condensed'  },
-          { title: 'Contextual',  anchor: 'tables-contextual' },
-          { title: 'Responsive',  anchor: 'tables-responsive' }
+          { title: 'Basic',             anchor: 'tables-basic'        },
+          { title: 'Centered',          anchor: 'tables-centered'     },
+          { title: 'Condensed',         anchor: 'tables-condensed'    },
+          { title: 'Contextual',        anchor: 'tables-contextual'   },
+          { title: 'Responsive',        anchor: 'tables-responsive'   }
         ] 
+      },
+      {
+        title: 'Pages',
+        link: '/developer-guide/pages',
+        pfened: false,
+        submenu: [
+          { title: 'Sign up',           anchor: 'sign-up'             },
+          { title: 'Login',             anchor: 'login'               },
+          { title: 'Forgot Password',       anchor: 'forgot-password' }
+        ]
       }
     ]
   };
@@ -114,6 +124,10 @@ angular.module('fyi-styles')
 
   $scope.$on('tables', function () {
     $scope.menu[4].opened = true;
+  });
+
+  $scope.$on('pages', function () {
+    $scope.menu[5].opened = true;
   });
 
   /**

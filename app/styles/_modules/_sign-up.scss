@@ -1,0 +1,52 @@
+.form-logo {
+  display: block;
+  margin: 50px auto 25px;
+
+  img {
+    width: 240px;
+  }
+  h3 {
+    padding-top: 20px;
+    color: $grey;
+  }
+}
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-label {
+  display: block;
+  max-width: 100%;
+  margin-bottom: 5px;
+  font-weight: bold;
+  font-size: 85%;
+  color: $grey;
+}
+
+.form-input {
+  display: block;
+  width: 100%;
+  padding: $padding-base-vertical $padding-base-horizontal;
+  border: 2px solid $input-border;
+  border-radius: $input-border-radius;
+  background-color: $input-bg;
+  background-image: none;
+  font-size: $fontBase;
+  color: $input-color;
+
+  @include transition(border-color 0.15s ease-in-out);
+
+  @include form-control-focus();
+
+}
+
+.checkbox {
+  position: relative;
+  display: block;
+  font-size: 85%;
+  color: $grey;
+}
+
+label {
+  cursor: default;
+}
