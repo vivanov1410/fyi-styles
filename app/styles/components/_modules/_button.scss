@@ -110,3 +110,28 @@
     text-decoration: underline;
   }
 }
+
+/**
+ * Block Button
+ */
+
+.button--block {
+  display: block;
+  width: 100%;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+// Vertically space out multiple block buttons
+.button--block + .button--block {
+  margin-top: 5px;
+}
+
+// Specificity overrides
+input[type="submit"],
+input[type="reset"],
+input[type="button"] {
+  &.button--block {
+    width: 100%;
+  }
+}
