@@ -5,6 +5,13 @@
 **/
 
 /**
+ * Mixins
+ */
+@import '_mixins/form',
+        '_mixins/vendor-prefixes',
+        '_mixins/tab-focus';
+
+/**
  * Base
  */
 @import '_base/palette',
@@ -17,7 +24,8 @@
         '_base/link',
         '_base/table',
         '_base/fonts',
-        '_base/code';
+        '_base/code',
+        '_base/form';
 
 /**
  * @todo find out where to include icons, maybe base 
@@ -40,12 +48,14 @@
         '_modules/button',
         '_modules/page-header',
         '_modules/nav',
-        '_modules/table';
+        '_modules/table',
+        '_modules/form';
 
 /**
  * States
  */
-@import '_states/nav';
+@import '_states/nav',
+        '_states/form';
 
 /**
  * Themes

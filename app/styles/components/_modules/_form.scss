@@ -1,4 +1,4 @@
-.form-logo {
+.form__logo {
   display: block;
   margin: 50px auto 25px;
 
@@ -10,11 +10,11 @@
     color: $grey;
   }
 }
-.form-group {
+.form__group {
   margin-bottom: 15px;
 }
 
-.form-label {
+.form__label {
   display: block;
   max-width: 100%;
   margin-bottom: 5px;
@@ -23,7 +23,7 @@
   color: $grey;
 }
 
-.form-input {
+.form__input {
   display: block;
   width: 100%;
   padding: $padding-base-vertical $padding-base-horizontal;
@@ -37,7 +37,6 @@
   @include transition(border-color 0.15s ease-in-out);
 
   @include form-control-focus();
-
 }
 
 .checkbox {
@@ -45,8 +44,4 @@
   display: block;
   font-size: 85%;
   color: $grey;
-}
-
-label {
-  cursor: default;
 }
